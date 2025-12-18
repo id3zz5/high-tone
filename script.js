@@ -1,0 +1,219 @@
+// すべてのハンバーガーメニューにイベントリスナーを追加
+document.querySelectorAll('.hamburger-menu').forEach(function (menu) {
+    menu.addEventListener('click', function () {
+        this.classList.toggle('active');
+        // 同じコンテナ内のnav-menuを取得
+        const navMenu = this.parentElement.querySelector('.nav-menu');
+        if (navMenu) {
+            navMenu.classList.toggle('active');
+        }
+    });
+});
+
+
+function initCaseSlider() {
+    if ($(window).width() < 1024) {
+        if (!$('.case__list').hasClass('slick-initialized')) {
+            $('.case__list').slick({
+                centerMode: true,
+                centerPadding: '60px',
+                slidesToShow: 3,
+                arrows: true,
+                prevArrow: '<button class="slick-prev"><i class="fa-solid fa-angle-left"></i></button>',
+                nextArrow: '<button class="slick-next"><i class="fa-solid fa-angle-right"></i></button>',
+                appendArrows: $('.case__arrow-area'),
+                responsive: [
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            arrows: false,
+                            centerMode: true,
+                            centerPadding: '40px',
+                            slidesToShow: 3
+                        }
+                    },
+                    {
+                        breakpoint: 480,
+                        settings: {
+                            arrows: true,
+                            appendArrows: $('.case__arrow-area'),
+                            centerMode: true,
+                            centerPadding: '40px',
+                            slidesToShow: 1
+                        }
+                    }
+                ]
+            });
+        }
+    } else {
+        // 1024px以上なら slick を停止
+        if ($('.case__list').hasClass('slick-initialized')) {
+            $('.case__list').slick('unslick');
+        }
+    }
+}
+// 初回実行
+initCaseSlider();
+
+// リサイズ時にも実行
+$(window).on('resize', function () {
+    initCaseSlider();
+});
+
+$('.voice__list').slick({
+    centerMode: true,
+    centerPadding: '60px',
+    slidesToShow: 3,
+    variableWidth: true,
+    arrows: true,
+    prevArrow: '<button class="slick-prev"><i class="fa-solid fa-angle-left"></i></button>',
+    nextArrow: '<button class="slick-next"><i class="fa-solid fa-angle-right"></i></button>',
+    appendArrows: $('.voice__arrow-area'),
+    responsive: [
+        {
+            breakpoint: 768,
+            settings: {
+                arrows: false,
+                centerMode: true,
+                centerPadding: '40px',
+                slidesToShow: 3
+            }
+        },
+        {
+            breakpoint: 480,
+            settings: {
+                arrows: true,
+                appendArrows: $('.voice__arrow-area'),
+                centerMode: true,
+                centerPadding: '40px',
+                slidesToShow: 1
+            }
+        }
+    ]
+});
+
+function initGoodsSlider() {
+    if ($(window).width() < 1024) {
+        if (!$('.goods__list').hasClass('slick-initialized')) {
+            $('.goods__list').slick({
+                centerMode: true,
+                centerPadding: '60px',
+                slidesToShow: 3,
+                arrows: true,
+                prevArrow: '<button class="slick-prev"><i class="fa-solid fa-angle-left"></i></button>',
+                nextArrow: '<button class="slick-next"><i class="fa-solid fa-angle-right"></i></button>',
+                appendArrows: $('.goods__arrow-area'),
+                responsive: [
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            arrows: false,
+                            centerMode: true,
+                            centerPadding: '40px',
+                            slidesToShow: 3
+                        }
+                    },
+                    {
+                        breakpoint: 480,
+                        settings: {
+                            arrows: true,
+                            appendArrows: $('.goods__arrow-area'),
+                            centerMode: true,
+                            centerPadding: '40px',
+                            slidesToShow: 1
+                        }
+                    }
+                ]
+            });
+        }
+    } else {
+        // 1024px以上なら slick を停止
+        if ($('.goods__list').hasClass('slick-initialized')) {
+            $('.goods__list').slick('unslick');
+        }
+    }
+}
+// 初回実行
+initGoodsSlider();
+
+// リサイズ時にも実行
+$(window).on('resize', function () {
+    initGoodsSlider();
+});
+
+
+
+// microcms
+
+const { createClient } = microcms;
+
+const client = createClient({
+    serviceDomain: 'high-tone', // service-domain は https://XXXX.microcms.io の XXXX 部分
+    apiKey: 'hEhkt0zWGCGcYyd1TZTi4V9uNLjQVb5r02FE',
+})
+client.get({ endpoint: 'info' }).then((res) => {
+    document.querySelector('#open').textContent = (res.open);
+    document.querySelector('#lastorder').textContent = (res.lastorder);
+    document.querySelector('#close').textContent = (res.close);
+    document.querySelector('#pay').textContent = (res.pay);
+})
+
+
+
+client.get({ endpoint: 'menucategory' }).then((categoryRes) => {
+    const categories = categoryRes.contents;
+
+    // ★ カテゴリーの順番
+    categories.sort((a, b) => a.order - b.order);
+
+    client.get({
+        endpoint: 'menu',
+        queries: { depth: 2 }
+    }).then((menuRes) => {
+        const menus = menuRes.contents;
+
+        // ★ メニューの順番
+        menus.sort((a, b) => a.order - b.order);
+
+        const list = document.getElementById('menu-list');
+
+        categories.forEach(category => {
+
+            const article = document.createElement('article');
+            article.className = 'single-menu__item container';
+
+            const pic = document.createElement('div');
+            pic.className = 'container__pic';
+            pic.innerHTML = `
+        <img src="${category.image?.url || '../images/pic_flow03.webp'}" alt="">
+      `;
+
+            const text = document.createElement('div');
+            text.className = 'container__text';
+
+            // ★ title（そのまま）
+            const subtitle = document.createElement('h3');
+            subtitle.className = 'container__subtitle';
+            subtitle.textContent = category.subtitle;
+            text.appendChild(subtitle);
+
+            menus
+                .filter(menu => menu.category?.id === category.id)
+                .forEach(menu => {
+                    const dl = document.createElement('dl');
+                    dl.className = 'container__price';
+
+                    dl.innerHTML = `
+            <dt class="container__name">${menu.name}</dt>
+            <dd class="container__cost">${menu.price}</dd>
+          `;
+
+                    text.appendChild(dl);
+                });
+
+            article.appendChild(pic);
+            article.appendChild(text);
+            list.appendChild(article);
+        });
+    });
+});
