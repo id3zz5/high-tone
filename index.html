@@ -5,7 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Googleに表示されない -->
-    <meta name="robots" content="noindex">
+    <meta name="description" content="自爪育成サロンhigh-toneの公式サイトです。噛み爪・深爪などのお悩みに寄り添い、健康で美しい自爪へ導く施術を行っています。">
+    <!-- favicon -->
+    <link rel="icon" href="./images/webp_logo.webp">
+    <link rel="apple-touch-icon" href="./images/webp_logo.webp">
     <title>high-tone</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/the-new-css-reset/css/reset.min.css">
     <!-- アイコンフォント -->
@@ -15,15 +18,16 @@
     <!-- slick -->
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <!-- 自分のcss -->
-    <link rel="stylesheet" href="../css/style.min.css">
+    <link rel="stylesheet" href="./css/style.min.css">
 </head>
 
 <body>
     <header class="header">
         <div class="header__inner">
             <h1 class="header__logo">
-                <a href="">
-                    <img src="./images/webp_logo.webp" alt="" width="50" height="40" decoding="async" loading="eager">
+                <a href="./index.html">
+                    <img src="./images/webp_logo.webp" alt="ネイルサロンhigh-toneのロゴ" width="50" height="40" decoding="async"
+                        loading="eager">
                 </a>
             </h1>
 
@@ -38,35 +42,51 @@
                 <nav class="nav-menu">
                     <div class="nav-menu__inner">
                         <div class="nav-menu__item">
-                            <a href="" class="nav-menu__item-text">コンセプト</a>
-                            <i class="fa-solid fa-chevron-right nav-menu__item-arrow"></i>
+                            <a href="#concept" class="nav-menu__item-text">
+                                <p>コンセプト</p>
+                                <i class="fa-solid fa-chevron-right nav-menu__item-arrow"></i>
+                            </a>
                         </div>
                         <div class="nav-menu__item">
-                            <a href="" class="nav-menu__item-text">ビフォー＆アフター</a>
-                            <i class="fa-solid fa-chevron-right nav-menu__item-arrow"></i>
+                            <a href="#befor-after" class="nav-menu__item-text">
+                                <p>ビフォー＆アフター</p>
+                                <i class="fa-solid fa-chevron-right nav-menu__item-arrow"></i>
+                            </a>
                         </div>
                         <div class="nav-menu__item">
-                            <a href="" class="nav-menu__item-text">選ばれる理由</a>
-                            <i class="fa-solid fa-chevron-right nav-menu__item-arrow"></i>
+                            <a href="#feature" class="nav-menu__item-text">
+                                <p>選ばれる理由</p>
+                                <i class="fa-solid fa-chevron-right nav-menu__item-arrow"></i>
+                            </a>
                         </div>
                         <div class="nav-menu__item">
-                            <a href="" class="nav-menu__item-text">当日の流れ</a>
-                            <i class="fa-solid fa-chevron-right nav-menu__item-arrow"></i>
+                            <a href="#voice" class="nav-menu__item-text">
+                                <p>当日の流れ</p>
+                                <i class="fa-solid fa-chevron-right nav-menu__item-arrow"></i>
+                            </a>
                         </div>
                         <div class="nav-menu__item">
-                            <a href="" class="nav-menu__item-text">ご質問</a>
-                            <i class="fa-solid fa-chevron-right nav-menu__item-arrow"></i>
+                            <a href="#faq" class="nav-menu__item-text">
+                                <p>ご質問</p>
+                                <i class="fa-solid fa-chevron-right nav-menu__item-arrow"></i>
+                            </a>
                         </div>
                         <div class="nav-menu__item">
-                            <a href="" class="nav-menu__item-text">アクセス</a>
-                            <i class="fa-solid fa-chevron-right nav-menu__item-arrow"></i>
+                            <a href="#access" class="nav-menu__item-text">
+                                <p>アクセス</p>
+                                <i class="fa-solid fa-chevron-right nav-menu__item-arrow"></i>
+                            </a>
                         </div>
                         <div class="nav-menu__item">
-                            <a href="" class="nav-menu__item-text">想い</a>
-                            <i class="fa-solid fa-chevron-right nav-menu__item-arrow"></i>
+                            <a href="#message" class="nav-menu__item-text">
+                                <p>想い</p>
+                                <i class="fa-solid fa-chevron-right nav-menu__item-arrow"></i>
+                            </a>
                         </div>
                         <div class="sns">
-                            <a href="" class="sns__item sns__item-instagram"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="https://www.instagram.com/tone_chan.nail" class="sns__item sns__item-instagram">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
                             <a href="" class="sns__item sns__item-booking">ご予約はこちら</a>
                         </div>
                 </nav>
@@ -75,16 +95,19 @@
             <div class="dt-menu">
                 <nav class="gnav gnav-header">
                     <ul class="gnav__list gnav-header__list">
-                        <li class="gnav__item gnav-header__item gnav-header__item--active"><a href="">コンセプト</a></li>
-                        <li class="gnav__item gnav-header__item"><a href="">ビフォー＆アフター</a></li>
-                        <li class="gnav__item gnav-header__item"><a href="">選ばれる理由</a></li>
-                        <li class="gnav__item gnav-header__item"><a href="">当日の流れ</a></li>
-                        <li class="gnav__item gnav-header__item"><a href="">ご質問</a></li>
-                        <li class="gnav__item gnav-header__item"><a href="">アクセス</a></li>
-                        <li class="gnav__item gnav-header__item"><a href="">想い</a></li>
+                        <li class="gnav__item gnav-header__item gnav-header__item--active"><a href="#concept">コンセプト</a>
+                        </li>
+                        <li class="gnav__item gnav-header__item"><a href="#befor-after">ビフォー＆アフター</a></li>
+                        <li class="gnav__item gnav-header__item"><a href="#feature">選ばれる理由</a></li>
+                        <li class="gnav__item gnav-header__item"><a href="#flow">当日の流れ</a></li>
+                        <li class="gnav__item gnav-header__item"><a href="#faq">ご質問</a></li>
+                        <li class="gnav__item gnav-header__item"><a href="#access">アクセス</a></li>
+                        <li class="gnav__item gnav-header__item"><a href="#message">想い</a></li>
                     </ul>
                     <div class="sns">
-                        <a href="" class="sns__item sns__item-instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.instagram.com/tone_chan.nail" class="sns__item sns__item-instagram">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
                         <a href="" class="sns__item sns__item-booking">ご予約はこちら</a>
                     </div>
                 </nav>
@@ -98,9 +121,9 @@
                 <h2 class="mainvisual__title">一瞬の華やかさより、<br class="break"> 一生モノの美しさを</h2>
             </div>
         </section>
-        <section class="concept">
+        <section class="concept" id="concept">
             <div class="concept__inner">
-                <img src="./images/pic_concept.png" alt="" class="concept__pic">
+                <img src="./images/pic_concept.png" alt="" class="concept__pic fade-in">
                 <div class="concept__unit">
                     <h2 class="concept__title">ネイルを諦めていたあなたへ <br>もう一度爪と向き合う場所</h2>
                     <div class="concept__text">
@@ -112,10 +135,10 @@
                 </div>
             </div>
         </section>
-        <section class="worries">
+        <section class="worries" id="befor-after">
             <div class="worries__inner">
                 <h2 class="worries__title">こんな<span class="dots">お悩み</span>ありませんか？</h2>
-                <ul class="worries__list">
+                <ul class="worries__list fade-in">
                     <li class="worries__item">
                         <i class="fa-regular fa-square-check worries__check"></i>
                         <p class="worries__text">深爪・噛み爪で
@@ -165,43 +188,43 @@
         <div class="case">
             <div class="case__inner">
                 <div class="case__list">
-                    <dl class="case__item card">
-                        <dt class="card__pic"><img src="./images/pic_case01.Webp" alt=""></dt>
+                    <dl class="case__item card fade-in">
+                        <dt class="card__pic"><img src="./images/pic_case01.webp" alt="40代Y様の施術事例（育成期間6ヶ月）"></dt>
                         <dd class="card__text">
                             <p class="card__name">40代　Y様</p>
                             <p class="card__term">育成期間６ヶ月</p>
                         </dd>
                     </dl>
-                    <dl class="case__item card">
-                        <dt class="card__pic"><img src="./images/pic_case02.Webp" alt=""></dt>
+                    <dl class="case__item card fade-in">
+                        <dt class="card__pic"><img src="./images/pic_case02.webp" alt="30代O様の施術事例（育成期間3ヶ月）"></dt>
                         <dd class="card__text">
                             <p class="card__name">30代　O様</p>
                             <p class="card__term">育成期間３ヶ月</p>
                         </dd>
                     </dl>
-                    <dl class="case__item card">
-                        <dt class="card__pic"><img src="./images/pic_case03.Webp" alt=""></dt>
+                    <dl class="case__item card fade-in">
+                        <dt class="card__pic"><img src="./images/pic_case03.webp" alt="50代K様の施術事例（育成期間3ヶ月）"></dt>
                         <dd class="card__text">
                             <p class="card__name">50代　K様</p>
-                            <p class="card__term">育成期間三ヶ月</p>
+                            <p class="card__term">育成期間3ヶ月</p>
                         </dd>
                     </dl>
-                    <dl class="case__item card">
-                        <dt class="card__pic"><img src="./images/pic_case04.Webp" alt=""></dt>
+                    <dl class="case__item card fade-in">
+                        <dt class="card__pic"><img src="./images/pic_case04.webp" alt="50代N様の施術事例（育成期間1ヶ月）"></dt>
                         <dd class="card__text">
                             <p class="card__name">50代　N様</p>
                             <p class="card__term">育成期間１ヶ月</p>
                         </dd>
                     </dl>
-                    <dl class="case__item card">
-                        <dt class="card__pic"><img src="./images/pic_case05.Webp" alt=""></dt>
+                    <dl class="case__item card fade-in">
+                        <dt class="card__pic"><img src="./images/pic_case05.webp" alt="40代Y様の施術事例（育成期間8ヶ月）"></dt>
                         <dd class="card__text">
                             <p class="card__name">40代　Y様</p>
                             <p class="card__term">育成期間８ヶ月</p>
                         </dd>
                     </dl>
-                    <dl class="case__item card">
-                        <dt class="card__pic"><img src="./images/pic_case06.Webp" alt=""></dt>
+                    <dl class="case__item card fade-in">
+                        <dt class="card__pic"><img src="./images/pic_case06.webp" alt="40代H様の施術事例（育成期間9ヶ月）"></dt>
                         <dd class="card__text">
                             <p class="card__name">40代　H様</p>
                             <p class="card__term">育成期間９ヶ月</p>
@@ -211,11 +234,11 @@
                 <div class="arrow-area case__arrow-area"></div>
             </div>
         </div>
-        <section class="feature">
+        <section class="feature" id="feature">
             <div class="feature__inner">
                 <h2 class="feature__title">当店が選ばれる理由</h2>
                 <div class="feature__list">
-                    <article class="feature__item unit">
+                    <article class="feature__item unit fade-in">
                         <div class="unit__heading">
                             <p class="unit__number">01</p>
                             <h3 class="unit__title">完全パーソナルケアで、<br class="break">根本から美しい爪へ</h3>
@@ -227,7 +250,7 @@
                                 "本来の美しさ"を引き出します。</p>
                         </div>
                     </article>
-                    <article class="feature__item unit">
+                    <article class="feature__item unit fade-in">
                         <div class="unit__heading">
                             <p class="unit__number">02</p>
                             <h3 class="unit__title">24時間いつでも<br class="break">LINEで相談可能</h3>
@@ -238,7 +261,7 @@
                                 不安な夜でも寄り添える、あなた専属のパートナーでありたいから。</p>
                         </div>
                     </article>
-                    <article class="feature__item unit">
+                    <article class="feature__item  fade-in">
                         <div class="unit__heading">
                             <p class="unit__number">03</p>
                             <h3 class="unit__title">"自分で育てる力"を<br class="break">身につけるケアレッスン</h3>
@@ -254,7 +277,7 @@
                         class="break">自信を育てる。<br>それが、当店のゴールです。</p>
             </div>
         </section>
-        <section class="voice">
+        <section class="voice" id="voice">
             <div class="voice__inner voice-slider">
                 <h2 class="voice__title">お客様の声</h2>
                 <div class="voice__list voice__list--bg">
@@ -269,14 +292,7 @@
                         <img src="./images/ico_voice01.png" alt="" class="post__pic">
                         <h3 class="post__title">35代　O様</h3>
                         <div class="post__text">
-                            <p>私は色々な所でネイリストさんにお世話になりましたが、こちらtoneさんは爪の事を常に勉強していて常に新しい情報と知識をくれます。だから元気のなかった私の爪は今ではめちゃくちゃ元気で思い通りのデザインにしてくれます。爪の形などて悩んでいる方にお勧め！可愛いデザインを求めている方にお勧め！
-                        </div>
-                    </article>
-                    <article class="voice__item post">
-                        <img src="./images/ico_voice01.png" alt="" class="post__pic">
-                        <h3 class="post__title">30代　H様</h3>
-                        <div class="post__text">
-                            <p>久しぶりにネイルを始めて3ヶ月、モチベの上がる爪が生活の1部になってます！ケアとベースに施術の8割ほど時間をかけて、丁寧に指先マジックをかけてくださるネイリストさんです★私好みに一緒にデザインを考えてくれて、お値段以上の仕上がりにしてくれます！爪の構造から育て方まで専門知識も凄いんです！！あと、お喋りも楽しくって笑ってばっかの癒しタイムですよ♪ぜひ！
+                            <p>私は色々な所でネイリストさんにお世話になりましたが、こちらtoneさんは爪の事を常に勉強していて常に新しい情報と知識をくれます。だから元気のなかった私の爪は今ではめちゃくちゃ元気で思い通りのデザインにしてくれます。
                             </p>
                         </div>
                     </article>
@@ -284,7 +300,15 @@
                         <img src="./images/ico_voice01.png" alt="" class="post__pic">
                         <h3 class="post__title">30代　H様</h3>
                         <div class="post__text">
-                            <p>久しぶりにネイルを始めて3ヶ月、モチベの上がる爪が生活の1部になってます！ケアとベースに施術の8割ほど時間をかけて、丁寧に指先マジックをかけてくださるネイリストさんです★私好みに一緒にデザインを考えてくれて、お値段以上の仕上がりにしてくれます！爪の構造から育て方まで専門知識も凄いんです！！あと、お喋りも楽しくって笑ってばっかの癒しタイムですよ♪ぜひ！
+                            <p>久しぶりにネイルを始めて3ヶ月、モチベの上がる爪が生活の1部になってます！ケアとベースに施術の8割ほど時間をかけて、丁寧に指先マジックをかけてくださるネイリストさんです★
+                            </p>
+                        </div>
+                    </article>
+                    <article class="voice__item post">
+                        <img src="./images/ico_voice01.png" alt="" class="post__pic">
+                        <h3 class="post__title">30代　H様</h3>
+                        <div class="post__text">
+                            <p>久しぶりにネイルを始めて3ヶ月、モチベの上がる爪が生活の1部になってます！ケアとベースに施術の8割ほど時間をかけて、丁寧に指先マジックをかけてくださるネイリストさんです★
                             </p>
                         </div>
                     </article>
@@ -292,11 +316,11 @@
                 <div class="arrow-area voice__arrow-area"></div>
             </div>
         </section>
-        <section class="flow">
+        <section class="flow" id="flow">
             <div class="flow__inner">
                 <h2 class="flow__title">当日の流れ</h2>
                 <div class="flow__list">
-                    <div class="flow__item box">
+                    <div class="flow__item box fade-in">
                         <div class="box__pic">
                             <p class="box__number">01</p>
                             <img src="./images/pic_flow01.webp" alt="">
@@ -314,7 +338,7 @@
                         </div>
                         <i class="fa-solid fa-chevron-down box__arrow-bottom"></i>
                     </div>
-                    <div class="flow__item box">
+                    <div class="flow__item box fade-in">
                         <div class="box__pic">
                             <p class="box__number">02</p>
                             <img src="./images/pic_flow02.webp" alt="">
@@ -327,11 +351,12 @@
                                     生活習慣やお悩みを伺いながら、
                                     理想の手元へ導くための育成プランを
                                     一緒に立てていきます。
+                                </p>
                             </div>
                         </div>
                         <i class="fa-solid fa-chevron-down box__arrow-bottom"></i>
                     </div>
-                    <div class="flow__item box">
+                    <div class="flow__item box fade-in">
                         <div class="box__pic">
                             <p class="box__number">03</p>
                             <img src="./images/pic_flow03.webp" alt="">
@@ -348,7 +373,7 @@
                         </div>
                         <i class="fa-solid fa-chevron-down box__arrow-bottom"></i>
                     </div>
-                    <div class="flow__item box">
+                    <div class="flow__item box fade-in">
                         <div class="box__pic">
                             <p class="box__number">04</p>
                             <img src="./images/pic_flow04.webp" alt="">
@@ -366,25 +391,31 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
+            </div>
         </section>
-        <section class="menu">
+        <section class="menu" id="menu">
             <div class="menu__inner">
                 <h2 class="menu__title">メニュー</h2>
 
                 <div class="menu__list">
-                    <dl class="menu__item">
-                        <dt class="menu__subtitle">自爪育成コース</dt>
-                        <dd class="menu__price">初回　12,000円</dd>
+                    <dl class="menu__item fade-in">
+                        <a href="./menu.html">
+                            <dt class="menu__subtitle">自爪育成コース</dt>
+                            <dd class="menu__price">初回　12,000円</dd>
+                        </a>
                     </dl>
-                    <dl class="menu__item">
-                        <dt class="menu__subtitle">美爪キープコース</dt>
-                        <dd class="menu__price">ワンカラー/グラデーション　11,000円</dd>
+                    <dl class="menu__item fade-in">
+                        <a href="./menu.html">
+                            <dt class="menu__subtitle">美爪キープコース</dt>
+                            <dd class="menu__price">ワンカラー/グラデーション　11,000円</dd>
+                        </a>
                     </dl>
-                    <dl class="menu__item">
-                        <dt class="menu__subtitle">オフ＆ケア</dt>
-                        <dd class="menu__price">ネイルケア　4,000円</dd>
+                    <dl class="menu__item fade-in">
+                        <a href="./menu.html">
+                            <dt class="menu__subtitle">オフ＆ケア</dt>
+                            <dd class="menu__price">ネイルケア　4,000円</dd>
+                        </a>
                     </dl>
                 </div>
             </div>
@@ -392,10 +423,10 @@
 
         <img src="" alt="" class="banner">
 
-        <section class="faq">
+        <section class="faq" id="faq">
             <div class="faq__inner">
                 <h2 class="faq__title">よくあるご質問</h2>
-                <ul class="faq__list">
+                <ul class="faq__list fade-in">
                     <li class="faq__item">
                         <input type="checkbox" id="faq01" class="toggle">
                         <label for="faq01" class="question">
@@ -460,11 +491,11 @@
                 </ul>
             </div>
         </section>
-        <section class="access">
+        <section class="access" id="access">
             <div class="access__inner">
                 <h2 class="access__title">アクセス</h2>
                 <div class="access__info">
-                    <img src="./images/pic_access.webp" alt="" class="access__pic">
+                    <img src="./images/pic_access.webp" alt="ネイルサロンhigh-toneの外観" class="access__pic fade-in">
                     <div class="access__text">
                         <h3 class="access__name">nail salon high-tone</h3>
                         <div class="access__address">
@@ -479,7 +510,8 @@
                         <div class="access__pay">
                             <p id="pay"></p>
                         </div>
-                        <a class="btn">
+                        <a class="btn"
+                            href="https://www.google.co.jp/maps/place/%E3%80%92510-0318+%E4%B8%89%E9%87%8D%E7%9C%8C%E6%B4%A5%E5%B8%82%E6%B2%B3%E8%8A%B8%E7%94%BA%E6%9D%9C%E3%81%AE%E8%A1%97%EF%BC%95%E4%B8%81%E7%9B%AE27%E2%88%92%EF%BC%93/@34.807327,136.5296533,17z/data=!3m1!4b1!4m6!3m5!1s0x6004753eec9c8ae9:0x4c2e719b5811d4c6!8m2!3d34.8073226!4d136.5322282!16s%2Fg%2F11y00ycr06?entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoASAFQAw%3D%3D">
                             <p>GoogleMap</p>
                             <i class="fa-solid fa-chevron-right"></i>
                         </a>
@@ -488,13 +520,13 @@
                 </div>
             </div>
         </section>
-        <section class="message">
+        <section class="message" id="message">
             <div class="message__inner">
                 <h2 class="message__title">私の想い</h2>
                 <div class="message__info">
                     <div class="message__pic">
-                        <p class="message__name">とね　よしこ</p>
-                        <img src="./images/pic_message.webp" alt="">
+                        <img src="./images/pic_message.webp" alt="ネイルサロンhigh-toneのオーナーの写真" class="message__pic fade-in">
+                        <p class="message__name fade-in">とね　よしこ</p>
                     </div>
                     <div class="message__words">
                         <h3 class="message__subtitle"><em class="bold">羨ましい</em>で止まっていた過去のわたしへ。<br>
@@ -530,7 +562,7 @@
     <footer class="footer">
         <div class="footer__inner">
             <div class="footer__info">
-                <img src="./images/webp_logo.webp" alt="" class="footer__logo">
+                <img src="./images/webp_logo.webp" alt="ネイルサロンhigh-toneのロゴ" class="footer__logo">
                 <nav class="gnav gnav-footer">
                     <ul class="gnav__list gnav-footer__list">
                         <li class="gnav__item gnav-footer__item"><a href="">コンセプト</a></li>
@@ -544,11 +576,11 @@
                     </ul>
                 </nav>
                 <div class="footer__btn">
-                    <a class="btn">
+                    <a class="btn" href="">
                         <p>LINEでのご予約はこちら</p>
                         <i class="fa-solid fa-chevron-right"></i>
                     </a>
-                    <a class="btn">
+                    <a class="btn" href="https://www.instagram.com/tone_chan.nail">
                         <p>Instagramはこちら</p>
                         <i class="fa-solid fa-chevron-right"></i>
                     </a>
@@ -558,13 +590,13 @@
         </div>
     </footer>
     <!-- microcms -->
-    <script src="https://unpkg.com/microcms-js-sdk@latest/dist/umd/microcms-js-sdk.js"></script>
+    <script src="https://unpkg.com/microcms-js-sdk@latest/dist/umd/microcms-js-sdk.js" defer></script>
     <!--jQuery-->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
     <!-- slide -->
-    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js" defer></script>
     <!-- 自分のjs -->
-    <script src="script.js"></script>
+    <script src="./script.js" defer></script>
 </body>
 
 </html>

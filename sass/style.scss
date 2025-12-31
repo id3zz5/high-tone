@@ -197,6 +197,29 @@ img {
 // common
 // =================================================================
 
+// animation--------------------------------------------------
+
+html {
+    scroll-behavior: smooth;
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+
+    &.is-show {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    @for $i from 1 through 20 {
+        &:nth-child(#{$i}).is-show {
+            transition-delay: 0.4s * ($i - 1);
+        }
+    }
+}
+
 // header--------------------------------------------------
 .header {
     position: fixed;
@@ -258,13 +281,19 @@ img {
         grid-auto-flow: column;
         align-items: center;
         column-gap: rem(35);
-        color: $color-base;
+
 
         &__list {
             display: grid;
             grid-auto-flow: column;
             column-gap: rem(30);
             justify-content: end;
+            color: $color-text;
+            transition: color 0.4s;
+
+            &.is-white {
+                color: $color-base;
+            }
         }
 
         &__item {
@@ -322,6 +351,8 @@ img {
 
 // メニュー切り替え--------------------------------------------------
 .dt-menu {
+    // color: $color-text;
+    // transition: color 0.4s;
     display: none;
 
     @include mq() {
@@ -456,12 +487,15 @@ img {
     }
 
     &__item {
-        display: grid;
-        grid-auto-flow: column;
-        align-items: center;
-        justify-content: space-between;
         padding: rem(20) rem(15);
         border-bottom: 1px solid;
+
+        &-text {
+            display: grid;
+            grid-auto-flow: column;
+            align-items: center;
+            justify-content: space-between;
+        }
 
         &-arrow {
             position: relative;
@@ -623,8 +657,8 @@ img {
 }
 
 .post {
-    width: 250px;
-    height: 300px;
+    width: 300px;
+    height: 350px;
     padding: rem(50) rem(23) rem(23) rem(23);
     background-color: $color-base;
     text-align: center;
@@ -774,7 +808,7 @@ img {
     }
 
     @include mq() {
-        // height: 100vh;
+        height: 100vh;
         margin-bottom: rem(280);
         padding: rem(650) 0 rem(70) 0;
     }
@@ -1131,6 +1165,7 @@ img {
         }
     }
 
+
     &__subtitle {
         @include sub-title();
     }
@@ -1138,11 +1173,22 @@ img {
     &__list {
         display: grid;
         row-gap: rem(15);
+
+        // :nth-child(1) {
+        //     background: url(../images/pic_menu01.png) no-repeat center center / cover;
+        // }
+
+        // :nth-child(2) {
+        //     background: url(../images/pic_menu02.png) no-repeat center center / cover;
+        // }
+
+        // :nth-child(3) {
+        //     background: url(../images/pic_menu03.png) no-repeat center center / cover;
+        // }
     }
 
     &__item {
-        background-color: red;
-        // background: url(../images/pic_case01.webp) no-repeat center center / cover;
+        background-color: $color-bg;
         padding: rem(90) rem(64);
         text-align: center;
     }
@@ -1170,6 +1216,8 @@ img {
         }
     }
 }
+
+
 
 .faq {
     margin-bottom: rem(100);

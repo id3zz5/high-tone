@@ -1,3 +1,4 @@
+
 // すべてのハンバーガーメニューにイベントリスナーを追加
 document.querySelectorAll('.hamburger-menu').forEach(function (menu) {
     menu.addEventListener('click', function () {
@@ -215,5 +216,37 @@ client.get({ endpoint: 'menucategory' }).then((categoryRes) => {
             article.appendChild(text);
             list.appendChild(article);
         });
+    });
+});
+
+
+//headerの文字の色を変える
+const gnavList = document.querySelector('.gnav-header__list');
+const mainvisual = document.querySelector('.mainvisual');
+
+window.addEventListener('scroll', () => {
+    const mvBottom = mainvisual.offsetTop + mainvisual.offsetHeight;
+
+    if (window.scrollY < mvBottom) {
+        gnavList.classList.add('is-white');
+    } else {
+        gnavList.classList.remove('is-white');
+    }
+});
+
+// フェードイン
+document.addEventListener('DOMContentLoaded', function () {
+    const targets = document.querySelectorAll('.fade-in');
+
+    const observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('is-show');
+            }
+        });
+    });
+
+    targets.forEach(function (target) {
+        observer.observe(target);
     });
 });
