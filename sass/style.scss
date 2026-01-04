@@ -1187,7 +1187,13 @@ html {
         // }
     }
 
+    &__link {
+        display: flex;
+        height: 100%;
+    }
+
     &__item {
+        flex: 1;
         background-color: $color-bg;
         padding: rem(90) rem(64);
         text-align: center;

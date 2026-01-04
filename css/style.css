@@ -1216,7 +1216,12 @@ html {
   display: grid;
   row-gap: 0.9375rem;
 }
+.menu__link {
+  display: flex;
+  height: 100%;
+}
 .menu__item {
+  flex: 1;
   background-color: #F4F2EB;
   padding: 5.625rem 4rem;
   text-align: center;
