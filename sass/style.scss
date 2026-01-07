@@ -102,9 +102,9 @@ img {
 }
 
 .btn {
-    max-width: rem(300);
+    width: rem(300);
     display: grid;
-    padding: rem(8) rem(30);
+    padding: rem(15) rem(30);
     background-color: $color-base;
     font-weight: bold;
     grid-auto-flow: column;
@@ -150,6 +150,10 @@ img {
 
     &--center {
         margin: 0 auto;
+    }
+
+    @mixin mq() {
+        padding: rem(5) rem(30);
     }
 }
 
@@ -254,11 +258,34 @@ html {
 
         &__list {
             text-align: center;
+            margin-top: 0;
         }
 
         &__item {
             margin: 0 rem(15);
             display: inline-block;
+
+            a {
+                position: relative;
+                display: inline-block;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    bottom: -4px;
+                    width: 100%;
+                    height: 1px;
+                    background-color: $color-text;
+                    transform: scale(0, 1);
+                    transform-origin: left top;
+                    transition: transform .3s;
+                }
+
+                &:hover::after {
+                    transform: scale(1, 1);
+                }
+            }
         }
 
         @include mq() {
@@ -267,6 +294,7 @@ html {
                 grid-template-columns: 1fr 1fr;
                 gap: rem(15) rem(50);
                 text-align: left;
+                margin-top: rem(40);
             }
 
             &__item {
@@ -312,8 +340,9 @@ html {
                 transform-origin: center top;
             }
 
-            &:hover::after {
-                transform: scale(1, 1)
+            &:hover::after,
+            &.is-active::after {
+                transform: scale(1, 1);
             }
         }
 
@@ -533,6 +562,7 @@ html {
     }
 
     &__btn {
+        height: 100%;
         margin-bottom: rem(50);
         display: grid;
         row-gap: rem(15);
@@ -554,6 +584,7 @@ html {
             grid-template-columns: 1fr 340px 1fr;
             column-gap: rem(80);
             justify-content: center;
+            align-items: center;
         }
 
         &__logo {
@@ -562,7 +593,7 @@ html {
 
         &__btn {
             margin: 0;
-            height: rem(180);
+            height: rem(192);
             row-gap: rem(40);
         }
 
@@ -1196,23 +1227,27 @@ html {
     &__list {
         display: grid;
         row-gap: rem(15);
-
-        // :nth-child(1) {
-        //     background: url(../images/pic_menu01.png) no-repeat center center / cover;
-        // }
-
-        // :nth-child(2) {
-        //     background: url(../images/pic_menu02.png) no-repeat center center / cover;
-        // }
-
-        // :nth-child(3) {
-        //     background: url(../images/pic_menu03.png) no-repeat center center / cover;
-        // }
     }
 
     &__link {
         display: flex;
         height: 100%;
+
+        &:nth-child(1) .menu__item::after {
+            background: url(../images/pic_menu01.webp) no-repeat center / cover;
+        }
+
+        &:nth-child(2) .menu__item::after {
+            background: url(../images/pic_menu02.webp) no-repeat center / cover;
+        }
+
+        &:nth-child(3) .menu__item::after {
+            background: url(../images/pic_menu03.webp) no-repeat center / cover;
+        }
+
+        &:hover .menu__item::after {
+            transform: scale(1.1);
+        }
     }
 
     &__item {
@@ -1220,6 +1255,33 @@ html {
         background-color: $color-bg;
         padding: rem(90) rem(64);
         text-align: center;
+        position: relative;
+        color: $color-base;
+        overflow: hidden;
+
+        &::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background-size: cover;
+            background-position: center;
+            transform: scale(1);
+            transition: transform 0.4s ease;
+            z-index: 0;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.3);
+            z-index: 1;
+        }
+
+        >* {
+            position: relative;
+            z-index: 2;
+        }
     }
 
     @include mq() {
@@ -1487,10 +1549,19 @@ html {
     }
 
     &__pic {
-        // width: rem(588);
-        // height: rem(459);
-        background-color: red;
+        width: 100%;
+        aspect-ratio: 4 / 3;
+        overflow: hidden;
         margin: 0 auto;
+
+        & img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transform: scale(1.2);
+            transform-origin: center;
+            display: block;
+        }
     }
 
     &__text {

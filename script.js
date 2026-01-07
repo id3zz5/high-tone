@@ -278,3 +278,38 @@ document.addEventListener('DOMContentLoaded', function () {
         observer.observe(target);
     });
 });
+
+
+//いるところに線が出る
+document.addEventListener('DOMContentLoaded', () => {
+    const sections = document.querySelectorAll('section[id]');
+    const navItems = document.querySelectorAll('.gnav-header__item');
+
+    function onScroll() {
+        let currentSectionId = '';
+
+        sections.forEach(section => {
+            const rect = section.getBoundingClientRect();
+            const sectionTop = rect.top;
+            const sectionHeight = rect.height;
+
+            // 画面中央に来た section を判定
+            if (sectionTop <= window.innerHeight / 2 &&
+                sectionTop + sectionHeight > window.innerHeight / 2) {
+                currentSectionId = section.id;
+            }
+        });
+
+        navItems.forEach(item => {
+            item.classList.remove('is-active');
+
+            const link = item.querySelector('a');
+            if (link.getAttribute('href') === `#${currentSectionId}`) {
+                item.classList.add('is-active');
+            }
+        });
+    }
+
+    window.addEventListener('scroll', onScroll);
+    onScroll(); // 初期表示時
+});
