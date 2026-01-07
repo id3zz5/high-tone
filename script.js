@@ -1,5 +1,5 @@
 
-// すべてのハンバーガーメニューにイベントリスナーを追加
+// ハンバーガーメニュー
 document.querySelectorAll('.hamburger-menu').forEach(function (menu) {
     menu.addEventListener('click', function () {
         this.classList.toggle('active');
@@ -11,7 +11,19 @@ document.querySelectorAll('.hamburger-menu').forEach(function (menu) {
     });
 });
 
+// メニュー内リンクをクリックしたら閉じる
+document.querySelectorAll('.nav-menu a').forEach(function (link) {
+    link.addEventListener('click', function () {
+        const spMenu = this.closest('.sp-menu');
+        if (!spMenu) return;
 
+        spMenu.querySelector('.hamburger-menu')?.classList.remove('active');
+        spMenu.querySelector('.nav-menu')?.classList.remove('active');
+    });
+});
+
+
+// スライダー
 function initCaseSlider() {
     if ($(window).width() < 1024) {
         if (!$('.case__list').hasClass('slick-initialized')) {
@@ -27,7 +39,7 @@ function initCaseSlider() {
                     {
                         breakpoint: 768,
                         settings: {
-                            arrows: false,
+                            arrows: true,
                             centerMode: true,
                             centerPadding: '40px',
                             slidesToShow: 3
@@ -74,7 +86,7 @@ $('.voice__list').slick({
         {
             breakpoint: 768,
             settings: {
-                arrows: false,
+                arrows: true,
                 centerMode: true,
                 centerPadding: '40px',
                 slidesToShow: 3
@@ -144,39 +156,58 @@ $(window).on('resize', function () {
 
 
 
+
+
+
 // microcms
 
-const { createClient } = microcms;
+// データを取得
+async function getMicroCMSData(endpoint, options = {}) {
+    try {
+        // URLSearchParamsを使ってクエリを組み立てる
+        const params = new URLSearchParams({
+            endpoint: endpoint,
+            ...options
+        });
 
-const client = createClient({
-    serviceDomain: 'high-tone', // service-domain は https://XXXX.microcms.io の XXXX 部分
-    apiKey: 'hEhkt0zWGCGcYyd1TZTi4V9uNLjQVb5r02FE',
-})
-client.get({ endpoint: 'info' }).then((res) => {
-    document.querySelector('#open').textContent = (res.open);
-    document.querySelector('#lastorder').textContent = (res.lastorder);
-    document.querySelector('#close').textContent = (res.close);
-    document.querySelector('#pay').textContent = (res.pay);
-})
+        const response = await fetch(`api-proxy.php?${params.toString()}`);
 
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
 
+        const data = await response.json();
+        return data;
+    } catch (error) {
+        console.error("Fetch error:", error);
+    }
+}
 
-client.get({ endpoint: 'menucategory' }).then((categoryRes) => {
-    const categories = categoryRes.contents;
+//index.html
+getMicroCMSData('info')
+    .then(res => {
+        document.querySelector('#open').textContent = (res.open);
+        document.querySelector('#lastorder').textContent = (res.lastorder);
+        document.querySelector('#close').textContent = (res.close);
+        document.querySelector('#pay').textContent = (res.pay);
+    });
 
-    // ★ カテゴリーの順番
-    categories.sort((a, b) => a.order - b.order);
+//menu.html
+getMicroCMSData('menucategory')
+    .then((categoryRes) => {
+        const categories = categoryRes.contents;
+        categories.sort((a, b) => a.order - b.order);
 
-    client.get({
-        endpoint: 'menu',
-        queries: { depth: 2 }
-    }).then((menuRes) => {
-        const menus = menuRes.contents;
+        return getMicroCMSData('menu', { depth: 2 })
+            .then(menuRes => ({ categories, menus: menuRes.contents }));
+    })
+    .then(({ categories, menus }) => {
 
-        // ★ メニューの順番
         menus.sort((a, b) => a.order - b.order);
 
         const list = document.getElementById('menu-list');
+        if (!list) return;
+        list.innerHTML = '';
 
         categories.forEach(category => {
 
@@ -186,13 +217,12 @@ client.get({ endpoint: 'menucategory' }).then((categoryRes) => {
             const pic = document.createElement('div');
             pic.className = 'container__pic';
             pic.innerHTML = `
-        <img src="${category.image?.url || '../images/pic_flow03.webp'}" alt="">
-      `;
+                <img src="${category.image?.url || '../images/pic_flow03.webp'}" alt="">
+            `;
 
             const text = document.createElement('div');
             text.className = 'container__text';
 
-            // ★ title（そのまま）
             const subtitle = document.createElement('h3');
             subtitle.className = 'container__subtitle';
             subtitle.textContent = category.subtitle;
@@ -203,12 +233,10 @@ client.get({ endpoint: 'menucategory' }).then((categoryRes) => {
                 .forEach(menu => {
                     const dl = document.createElement('dl');
                     dl.className = 'container__price';
-
                     dl.innerHTML = `
-            <dt class="container__name">${menu.name}</dt>
-            <dd class="container__cost">${menu.price}</dd>
-          `;
-
+                        <dt class="container__name">${menu.name}</dt>
+                        <dd class="container__cost">${menu.price}</dd>
+                    `;
                     text.appendChild(dl);
                 });
 
@@ -217,20 +245,20 @@ client.get({ endpoint: 'menucategory' }).then((categoryRes) => {
             list.appendChild(article);
         });
     });
-});
-
 
 //headerの文字の色を変える
 const gnavList = document.querySelector('.gnav-header__list');
 const mainvisual = document.querySelector('.mainvisual');
 
 window.addEventListener('scroll', () => {
-    const mvBottom = mainvisual.offsetTop + mainvisual.offsetHeight;
+    if (mainvisual) {
+        const mvBottom = mainvisual.offsetTop + mainvisual.offsetHeight;
 
-    if (window.scrollY < mvBottom) {
-        gnavList.classList.add('is-white');
-    } else {
-        gnavList.classList.remove('is-white');
+        if (window.scrollY < mvBottom) {
+            gnavList.classList.add('is-white');
+        } else {
+            gnavList.classList.remove('is-white');
+        }
     }
 });
 

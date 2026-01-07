@@ -5,13 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Googleに表示されない -->
-    <meta name="robots" content="noindex">
-    <title>high-tone</title>
+    <meta name="description" content="自爪育成サロンhigh-toneのメニュー・料金一覧ページです。自爪育成のコースやケア商品をご紹介しています。">
+    <!-- favicon -->
+    <link rel="icon" href="./images/favicon_logo.png">
+    <link rel="apple-touch-icon" href="./images/webp_logo.webp">
+    <title>メニュー・料金｜自爪育成サロン high-tone</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/the-new-css-reset/css/reset.min.css">
     <!-- アイコンフォント -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <!-- slick -->
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <!-- 自分のcss -->
@@ -21,10 +22,11 @@
 <body>
     <header class="header">
         <div class="header__inner">
-            <h1 class="header__logo">
-                <a href=""><img src="./images/webp_logo.webp" alt="" width="50" height="40" decoding="async"
-                        loading="eager"></a>
-            </h1>
+            <a href="./index.html" class="header__logo">
+                <img src="./images/webp_logo.webp" alt="自爪育成サロンhigh-toneのロゴ" width="50" height="40" decoding="async"
+                    loading="eager">
+            </a>
+
 
             <div class="sp-menu">
                 <div class="hamburger-menu">
@@ -37,35 +39,58 @@
                 <nav class="nav-menu">
                     <div class="nav-menu__inner">
                         <div class="nav-menu__item">
-                            <a href="" class="nav-menu__item-text">コンセプト</a>
-                            <i class="fa-solid fa-chevron-right nav-menu__item-arrow"></i>
+                            <a href="./index.html#concept" class="nav-menu__item-text">
+                                <span>コンセプト</span>
+                                <i class="fa-solid fa-chevron-right nav-menu__item-arrow"></i>
+                            </a>
                         </div>
                         <div class="nav-menu__item">
-                            <a href="" class="nav-menu__item-text">ビフォー＆アフター</a>
-                            <i class="fa-solid fa-chevron-right nav-menu__item-arrow"></i>
+                            <a href="./index.html#before-after" class="nav-menu__item-text">
+                                <span>ビフォー＆アフター</span>
+                                <i class="fa-solid fa-chevron-right nav-menu__item-arrow"></i>
+                            </a>
                         </div>
                         <div class="nav-menu__item">
-                            <a href="" class="nav-menu__item-text">選ばれる理由</a>
-                            <i class="fa-solid fa-chevron-right nav-menu__item-arrow"></i>
+                            <a href="./index.html#feature" class="nav-menu__item-text">
+                                <span>選ばれる理由</span>
+                                <i class="fa-solid fa-chevron-right nav-menu__item-arrow"></i>
+                            </a>
                         </div>
                         <div class="nav-menu__item">
-                            <a href="" class="nav-menu__item-text">当日の流れ</a>
-                            <i class="fa-solid fa-chevron-right nav-menu__item-arrow"></i>
+                            <a href="./index.html#flow" class="nav-menu__item-text">
+                                <span>当日の流れ</span>
+                                <i class="fa-solid fa-chevron-right nav-menu__item-arrow"></i>
+                            </a>
                         </div>
                         <div class="nav-menu__item">
-                            <a href="" class="nav-menu__item-text">ご質問</a>
-                            <i class="fa-solid fa-chevron-right nav-menu__item-arrow"></i>
+                            <a href="./index.html#menu" class="nav-menu__item-text">
+                                <span>メニュー</span>
+                                <i class="fa-solid fa-chevron-right nav-menu__item-arrow"></i>
+                            </a>
                         </div>
                         <div class="nav-menu__item">
-                            <a href="" class="nav-menu__item-text">アクセス</a>
-                            <i class="fa-solid fa-chevron-right nav-menu__item-arrow"></i>
+                            <a href="./index.html#faq" class="nav-menu__item-text">
+                                <span>ご質問</span>
+                                <i class="fa-solid fa-chevron-right nav-menu__item-arrow"></i>
+                            </a>
                         </div>
                         <div class="nav-menu__item">
-                            <a href="" class="nav-menu__item-text">想い</a>
-                            <i class="fa-solid fa-chevron-right nav-menu__item-arrow"></i>
+                            <a href="./index.html#access" class="nav-menu__item-text">
+                                <span>アクセス</span>
+                                <i class="fa-solid fa-chevron-right nav-menu__item-arrow"></i>
+                            </a>
+                        </div>
+                        <div class="nav-menu__item">
+                            <a href="./index.html#message" class="nav-menu__item-text">
+                                <span>想い</span>
+                                <i class="fa-solid fa-chevron-right nav-menu__item-arrow"></i>
+                            </a>
                         </div>
                         <div class="sns">
-                            <a href="" class="sns__item sns__item-instagram"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="https://www.instagram.com/tone_chan.nail" class="sns__item sns__item-instagram"
+                                aria-label="high-toneのInstagram">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
                             <a href="" class="sns__item sns__item-booking">ご予約はこちら</a>
                         </div>
                     </div>
@@ -75,16 +100,22 @@
             <div class="dt-menu">
                 <nav class="gnav gnav-header">
                     <ul class="gnav__list gnav-header__list">
-                        <li class="gnav__item gnav-header__item gnav-header__item--active"><a href="">コンセプト</a></li>
-                        <li class="gnav__item gnav-header__item"><a href="">ビフォー＆アフター</a></li>
-                        <li class="gnav__item gnav-header__item"><a href="">選ばれる理由</a></li>
-                        <li class="gnav__item gnav-header__item"><a href="">当日の流れ</a></li>
-                        <li class="gnav__item gnav-header__item"><a href="">ご質問</a></li>
-                        <li class="gnav__item gnav-header__item"><a href="">アクセス</a></li>
-                        <li class="gnav__item gnav-header__item"><a href="">想い</a></li>
+                        <li class="gnav__item gnav-header__item gnav-header__item--active"><a
+                                href="./index.html#concept">コンセプト</a>
+                        </li>
+                        <li class="gnav__item gnav-header__item"><a href="./index.html#before-after">ビフォー＆アフター</a></li>
+                        <li class="gnav__item gnav-header__item"><a href="./index.html#feature">選ばれる理由</a></li>
+                        <li class="gnav__item gnav-header__item"><a href="./index.html#flow">当日の流れ</a></li>
+                        <li class="gnav__item gnav-header__item"><a href="./index.html#menu">メニュー</a></li>
+                        <li class="gnav__item gnav-header__item"><a href="./index.html#faq">ご質問</a></li>
+                        <li class="gnav__item gnav-header__item"><a href="./index.html#access">アクセス</a></li>
+                        <li class="gnav__item gnav-header__item"><a href="./index.html#message">想い</a></li>
                     </ul>
                     <div class="sns">
-                        <a href="" class="sns__item sns__item-instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.instagram.com/tone_chan.nail" class="sns__item sns__item-instagram"
+                            aria-label="high-toneのInstagram">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
                         <a href="" class="sns__item sns__item-booking">ご予約はこちら</a>
                     </div>
                 </nav>
@@ -96,20 +127,20 @@
     <main class="single-main">
         <section class="single-menu">
             <div class="single-menu__inner">
-                <h2 class="single-menu__title">メニュー</h2>
+                <h1 class="single-menu__title">メニュー</h1>
                 <div class="single-menu__list" id="menu-list">
-
+                    <p class="single-menu__loading">メニューを読み込み中です…</p>
                 </div>
             </div>
         </section>
         <section class="attention">
             <div class="attention__inner">
                 <h2 class="attention__title">注意事項</h2>
-                <p class="attention__text">お客様にご安心して施術を受けていただくために以下の注意事項をご確認ください。</p>
+                <p class="attention__text">お客様に安心して施術を受けていただくために以下の注意事項をご確認ください。</p>
                 <h3 class="attention__subtitle">ご予約前に</h3>
                 <ul class="attention__list">
                     <li class="attention__item">皮膚疾患などで施術ができない場合がある為、事前に手元のお写真を送っていただいております。</li>
-                    <li class="attention__item">爪、お体の状態によっては施術をお断りする場合がございます。。</li>
+                    <li class="attention__item">爪、お体の状態によっては施術をお断りする場合がございます。</li>
                     <li class="attention__item">薬品、紫外線、アレルギー等がある場合には必ずお申し出ください。</li>
                     <li class="attention__item">自宅サロンとなりますのでサロン住所の詳細は、ご予約確定後にお伝えいたします。</li>
                     <li class="attention__item">当店は自爪育成サロンとなりますので、単発(一回限り)でのご予約は受け付けておりません。三ヶ月以上の継続をおすすめしております。</li>
@@ -130,7 +161,7 @@
         <section class="gallery">
             <div class="gallery__inner">
                 <h2 class="gallery__title">爪がきれいになると</h2>
-                <a class="btn btn--center">
+                <a class="btn btn--center" href="https://www.instagram.com/tone_chan.nail">
                     <p>Instagram</p>
                     <i class="fa-solid fa-chevron-right"></i>
                 </a>
@@ -139,44 +170,74 @@
         <section class="goods">
             <div class="goods__inner">
                 <h2 class="goods__title">ケア商品</h2>
-                <div class="goods__list">
-                    <img src="./images/pic_goods01.webp" alt="" class="goods__pic">
-                    <img src="./images/pic_goods02.webp" alt="" class="goods__pic">
-                </div>
+                <ul class="goods__list">
+                    <li class="goods__item"><img src="./images/pic_goods01.webp" alt="キューティクルケアオイル"></li>
+                    <li class="goods__item"><img src="./images/pic_goods02.webp" alt="二層式ハンドローション"></li>
+                </ul>
                 <div class="arrow-area goods__arrow-area"></div>
+            </div>
+        </section>
+        <section class="access" id="access">
+            <div class="access__inner">
+                <h2 class="access__title">アクセス</h2>
+                <div class="access__info">
+                    <img src="./images/pic_access.webp" alt="ネイルサロンhigh-toneの外観" class="access__pic fade-in">
+                    <div class="access__text">
+                        <h3 class="access__name">nail salon high-tone</h3>
+                        <div class="access__address">
+                            <p>三重県津河芸町社の街５丁目２７－３</p>
+                            <p>近鉄千里駅より車で7分</p>
+                        </div>
+                        <div class="access__time">
+                            <p>OPEN　<span id="open">読み込み中</span></p>
+                            <p>LAST ORDER　<span id="lastorder">読み込み中</span></p>
+                            <p>CLOSE　<span id="close">読み込み中</span></p>
+                        </div>
+                        <div class="access__pay">
+                            <p id="pay"></p>
+                        </div>
+                        <a class="btn"
+                            href="https://www.google.co.jp/maps/place/%E3%80%92510-0318+%E4%B8%89%E9%87%8D%E7%9C%8C%E6%B4%A5%E5%B8%82%E6%B2%B3%E8%8A%B8%E7%94%BA%E6%9D%9C%E3%81%AE%E8%A1%97%EF%BC%95%E4%B8%81%E7%9B%AE27%E2%88%92%EF%BC%93/@34.807327,136.5296533,17z/data=!3m1!4b1!4m6!3m5!1s0x6004753eec9c8ae9:0x4c2e719b5811d4c6!8m2!3d34.8073226!4d136.5322282!16s%2Fg%2F11y00ycr06?entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoASAFQAw%3D%3D">
+                            <p>GoogleMap</p>
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </a>
+
+                    </div>
+                </div>
             </div>
         </section>
     </main>
 
-
     <footer class="footer">
         <div class="footer__inner">
             <div class="footer__info">
-                <img src="./images/webp_logo.webp" alt="" class="footer__logo">
+                <img src="./images/webp_logo.webp" alt="自爪育成サロンhigh-toneのロゴ" class="footer__logo">
                 <nav class="gnav gnav-footer">
                     <ul class="gnav__list gnav-footer__list">
-                        <li class="gnav__item gnav-footer__item"><a href="">コンセプト</a></li>
-                        <li class="gnav__item gnav-footer__item"><a href="">ビフォー＆アフター</a></li>
-                        <li class="gnav__item gnav-footer__item"><a href="">選ばれる理由</a></li>
-                        <li class="gnav__item gnav-footer__item"><a href="">お客様の声</a></li>
-                        <li class="gnav__item gnav-footer__item"><a href="">当日の流れ</a></li>
-                        <li class="gnav__item gnav-footer__item"><a href="">ご質問</a></li>
-                        <li class="gnav__item gnav-footer__item"><a href="">アクセス</a></li>
-                        <li class="gnav__item gnav-footer__item"><a href="">想い</a></li>
+                        <li class="gnav__item gnav-footer__item gnav-footer__item--active"><a
+                                href="./index.html#concept">コンセプト</a>
+                        </li>
+                        <li class="gnav__item gnav-footer__item"><a href="./index.html#before-after">ビフォー＆アフター</a></li>
+                        <li class="gnav__item gnav-footer__item"><a href="./index.html#feature">選ばれる理由</a></li>
+                        <li class="gnav__item gnav-footer__item"><a href="./index.html#flow">当日の流れ</a></li>
+                        <li class="gnav__item gnav-footer__item"><a href="./index.html#menu">メニュー</a></li>
+                        <li class="gnav__item gnav-footer__item"><a href="./index.html#faq">ご質問</a></li>
+                        <li class="gnav__item gnav-footer__item"><a href="./index.html#access">アクセス</a></li>
+                        <li class="gnav__item gnav-footer__item"><a href="./index.html#message">想い</a></li>
                     </ul>
                 </nav>
                 <div class="footer__btn">
-                    <a class="btn">
+                    <a class="btn" href="">
                         <p>LINEでのご予約はこちら</p>
                         <i class="fa-solid fa-chevron-right"></i>
                     </a>
-                    <a class="btn">
-                        <p>Instagramはこちら</p>
+                    <a class="btn" href="https://www.instagram.com/tone_chan.nail">
+                        <span>Instagramはこちら</span>
                         <i class="fa-solid fa-chevron-right"></i>
                     </a>
                 </div>
             </div>
-            <small class="footer__copy">&copy; コピーライトコピーライトコピーライト</small>
+            <small class="footer__copy">&copy; 2026 nail salon high-tone</small>
         </div>
     </footer>
     <!-- microcms -->
