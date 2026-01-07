@@ -192,6 +192,69 @@ getMicroCMSData('info')
         document.querySelector('#pay').textContent = (res.pay);
     });
 
+getMicroCMSData('menucategory')
+    .then(categoryRes => {
+
+        const categories = categoryRes.contents;
+
+        return getMicroCMSData('menu', { depth: 2 })
+            .then(menuRes => ({ categories, menus: menuRes.contents }));
+    })
+    .then(({ categories, menus }) => {
+
+        // カテゴリID → category を引けるようにする
+        const categoryMap = {};
+        categories.forEach(category => {
+            categoryMap[category.id] = category;
+        });
+
+        const grouped = {};
+        menus.forEach(menu => {
+            const categoryId = menu.category?.id;
+            if (!categoryId) return;
+
+            if (!grouped[categoryId]) {
+                grouped[categoryId] = [];
+            }
+            grouped[categoryId].push(menu);
+        });
+
+        const list = document.getElementById('top-menu-list');
+        if (!list) return;
+        list.innerHTML = '';
+
+        Object.keys(grouped).forEach(categoryId => {
+
+            const menuList = grouped[categoryId];
+            menuList.sort((a, b) => a.order - b.order);
+            const menu = menuList[0];
+
+            const category = categoryMap[categoryId];
+            if (!category) return;
+
+            const link = document.createElement('a');
+            link.className = 'menu__link';
+            link.href = './menu.html';
+
+            if (menu.image?.url) {
+                link.style.backgroundImage =
+                    `url(${menu.image.url}?w=800&h=600&fit=crop)`;
+            }
+
+            link.innerHTML = `
+        <dl class="menu__item">
+          <dt class="menu__subtitle">${category.subtitle}</dt>
+          <dd class="menu__price">
+            <span class="menu__price-name">${menu.name}</span>
+            <span class="menu__price-cost">${menu.price}</span>
+          </dd>
+        </dl>
+      `;
+
+            list.appendChild(link);
+        });
+    });
+
 //menu.html
 getMicroCMSData('menucategory')
     .then((categoryRes) => {
