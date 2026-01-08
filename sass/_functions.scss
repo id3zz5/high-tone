@@ -1,0 +1,96 @@
+// =================================================================
+//  Functions
+// =================================================================
+
+// pxをremに変換する
+// @param {number} $px-value - px値
+// @return {string} - rem値
+@function rem($px-value) {
+    @return #{math.div($px-value, $font-size-base)}rem;
+}
+
+// XDのトラッキング値をemに変換する
+// @param {number} $xd-value - XDのトラッキング値
+// @return {string} - em値
+@function ls($xd-value) {
+    @return #{math.div($xd-value, 100)}em;
+}
+
+
+// メディアクエリ (モバイルファースト)
+// @param {string} $breakpoint - $breakpointsのキー
+@mixin mq($breakpoint: desktop) {
+    @media (width >=map-get($breakpoints, $breakpoint)) {
+        @content;
+    }
+}
+
+// インナー幅の指定
+// @param {number} $mw - max-width
+// @param {number} $w  - width
+@mixin inner($mw: 1060px, $w: 90%) {
+    max-width: $mw;
+    width: $w;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+// フォーカスが当たったら表示する
+*:focus {
+    position: static;
+    width: auto;
+    height: auto;
+    overflow: visible;
+}
+
+body {
+    color: $color-text;
+    font-size: rem($font-size-base);
+    font-family: $font-family-mincho;
+    line-height: math.div(32, 16);
+    letter-spacing: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+
+@mixin main-title($img: null) {
+    font-size: rem($sm-main-title);
+    line-height: math.div(48, $sm-main-title);
+    position: relative;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 0;
+
+    &::before {
+        content: "";
+        background-image: url($img);
+        background-size: contain;
+        background-repeat: no-repeat;
+        display: block;
+        position: absolute;
+        right: rem(-20);
+        top: rem(-10);
+        z-index: -1;
+    }
+
+    @include mq() {
+        font-size: rem($dt-main-title);
+        line-height: math.div(90, $dt-main-title);
+    }
+}
+
+@mixin sub-title() {
+    font-size: rem($sm-sub-title);
+    line-height: math.div(34, $sm-sub-title);
+    font-weight: bold;
+
+    @include mq() {
+        font-size: rem($dt-sub-title);
+        line-height: math.div(40, $dt-sub-title);
+    }
+}

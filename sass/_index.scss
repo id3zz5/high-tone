@@ -1,0 +1,709 @@
+// =================================================================
+//  index.html
+// =================================================================
+
+.mainvisual {
+    color: $color-base;
+    background: url(../images/pic_main.webp) no-repeat center center / cover;
+    padding: rem(500) 0 rem(20) 0;
+    margin-bottom: rem(150);
+
+    &__inner {
+        @include inner(1440px);
+    }
+
+    &__title {
+        @include main-title();
+        margin-left: 0;
+    }
+
+    @include mq() {
+        height: 100vh;
+        margin-bottom: rem(280);
+        padding: rem(650) 0 rem(70) 0;
+    }
+}
+
+.concept {
+    margin-bottom: rem(100);
+    padding: rem(200) 0 rem(30) 0;
+    background-color: $color-bg;
+    position: relative;
+
+    &__inner {
+        @include inner(1440px);
+    }
+
+    &__pic {
+        min-width: 232px;
+        height: 272px;
+        position: absolute;
+        top: rem(-50);
+    }
+
+    &__title {
+        @include main-title();
+        margin-bottom: rem(30);
+    }
+
+    &__text {
+        margin-bottom: rem(30);
+    }
+
+    @include mq() {
+        margin-bottom: rem(200);
+        padding: rem(50) 0 rem(50) 0;
+        background-color: #fff;
+
+        &__inner {
+            display: grid;
+            grid-auto-flow: column;
+            background-color: $color-bg;
+            padding: rem(50) rem(100);
+        }
+
+        &__pic {
+            width: 600px;
+            height: 700px;
+            top: rem(-80);
+        }
+
+        &__title {
+            margin-left: auto;
+            margin-right: 0;
+            margin-bottom: rem(50);
+        }
+
+        &__text {
+            max-width: 465px;
+            margin-left: auto;
+        }
+
+        &__btn {
+            margin-left: auto;
+        }
+    }
+}
+
+.worries {
+    &__inner {
+        @include inner();
+    }
+
+    &__title {
+        @include main-title();
+        margin-bottom: rem(30);
+        text-align: center;
+    }
+
+    &__list {
+        display: grid;
+        row-gap: $space-m;
+        margin-bottom: rem(30);
+    }
+
+    &__item {
+        display: flex;
+        align-items: flex-start;
+        padding: $space-m;
+        border: 1px solid;
+        column-gap: rem(5);
+    }
+
+    &__check {
+        margin-top: rem(7);
+    }
+
+    &__catch {
+        @include main-title();
+        text-align: center;
+        display: grid;
+        row-gap: rem(15);
+        justify-items: center;
+    }
+
+    @include mq(tablet) {
+        &__title {
+            margin-bottom: rem(80);
+        }
+
+        &__list {
+            max-width: 1032px;
+            margin: 0 auto rem(80) auto;
+            grid-template-columns: 1fr 1fr;
+            gap: rem(30);
+        }
+
+        &__catch {
+            margin-bottom: rem(100);
+        }
+    }
+}
+
+.case {
+    &__inner {
+        @include inner();
+        margin: 0 auto;
+    }
+
+    @include mq() {
+        margin-bottom: rem(200);
+
+        &__list {
+            margin: 0 auto;
+            display: grid;
+            max-width: 1062px;
+            grid-template-columns: repeat(3, auto);
+            gap: rem(80);
+        }
+    }
+}
+
+.feature {
+    margin-bottom: rem(100);
+
+    &__inner {
+        @include inner();
+    }
+
+    &__title {
+        margin-bottom: rem(30);
+        @include main-title("../images/deco_feature.webp");
+        text-align: center;
+
+        &::before {
+            width: 70px;
+            height: 30px;
+        }
+    }
+
+    &__list {
+        margin-bottom: rem(80);
+        display: grid;
+        row-gap: rem(15);
+    }
+
+    &__item {
+        padding: rem(300) rem(40) rem(20);
+        background-color: $color-bg;
+        border-radius: rem(50);
+    }
+
+    &__catch {
+        @include main-title();
+        text-align: center;
+    }
+
+    @include mq() {
+        margin-bottom: rem(200);
+
+        &__title {
+            margin-bottom: rem(80);
+
+            &::before {
+                width: 110px;
+                height: 77px;
+            }
+        }
+
+        &__list {
+            margin-bottom: rem(80);
+            row-gap: rem(30);
+        }
+
+        &__item {
+            padding-bottom: rem(50);
+        }
+    }
+}
+
+.voice {
+    margin-bottom: rem(100);
+    position: relative;
+
+    &__inner {
+        @include inner();
+    }
+
+    &__title {
+        @include main-title("../images/deco_voice.webp");
+        text-align: center;
+
+        &::before {
+            width: 70px;
+            height: 30px;
+        }
+    }
+
+    &__list {
+        margin-top: rem(30);
+    }
+
+    &__arrow-area {
+        margin-top: rem(20);
+    }
+
+    .slick-track {
+        padding: rem(30) 0;
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: rem(80);
+        right: 0;
+        width: 95%;
+        height: 75%;
+        background-color: $color-bg;
+        z-index: -1;
+    }
+
+    @include mq() {
+        padding: rem(100) 0;
+
+        &__inner {
+            max-width: 100%;
+            width: 100%;
+        }
+
+        &::before {
+            content: none;
+        }
+
+        .slick-track {
+            padding: 0;
+        }
+
+        &-slider {
+            margin-right: 0;
+            margin-left: auto;
+            display: grid;
+            grid-template-columns: 30% 70%;
+            grid-template-rows: repeat(3, 150px);
+
+            grid-column: 2 / 3;
+            grid-row: 1 / 5;
+        }
+
+        &__title {
+            grid-column: 1 / 2;
+            grid-row: 2 / 3;
+        }
+
+        &__arrow-area {
+            grid-column: 1 / 2;
+            grid-row: 3 / 4;
+        }
+
+        &__list {
+            grid-column: 2/2;
+            grid-row: 1/5;
+
+            padding: rem(100) 0;
+            padding-left: rem(80);
+            background-color: $color-bg;
+        }
+    }
+}
+
+.flow {
+    margin-bottom: rem(100);
+    text-align: center;
+
+    &__inner {
+        @include inner();
+    }
+
+    &__title {
+        @include main-title("../images/deco_flow.webp");
+        margin-bottom: rem(30);
+        text-align: center;
+
+        &::before {
+            width: 42px;
+            height: 51px;
+        }
+    }
+
+    &__list {
+        display: grid;
+        row-gap: rem(70);
+    }
+
+    @include mq(tablet) {
+        margin-bottom: rem(200);
+
+        &__title {
+            margin-bottom: rem(80);
+
+            &::before {
+                width: 68px;
+                height: 77px;
+            }
+        }
+
+        &__list {
+            row-gap: rem(50);
+        }
+    }
+}
+
+.menu {
+    margin-bottom: rem(100);
+
+    &__inner {
+        @include inner(1440px);
+    }
+
+    &__title {
+        @include main-title("../images/deco_menu.webp");
+        margin-bottom: rem(30);
+        text-align: center;
+
+        &::before {
+            width: 55px;
+            height: 40px;
+        }
+    }
+
+    &__subtitle {
+        @include sub-title();
+    }
+
+    &__list {
+        display: grid;
+        row-gap: rem(15);
+    }
+
+    &__price-name {
+        white-space: pre-wrap;
+    }
+
+    &__price-cost {
+        display: block;
+    }
+
+    &__block {
+        position: relative;
+        overflow: hidden;
+
+        .menu__item::after {
+            background: var(--menu-bg) no-repeat center / cover;
+            transition: transform .3s;
+        }
+
+        &:hover .menu__item::after {
+            transform: scale(1.1);
+        }
+    }
+
+    &__link {
+        display: block;
+        aspect-ratio: 9/16;
+    }
+
+    &__item {
+        align-items: center;
+        display: flex;
+        height: 100%;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+
+        .menu__more {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background-size: cover;
+            background-position: center;
+            transform: scale(1);
+            transition: transform 0.4s ease;
+            z-index: -2;
+        }
+    }
+
+    @include mq() {
+        margin-bottom: rem(200);
+
+        &__title {
+            margin-bottom: rem(80);
+
+            &::before {
+                width: 86px;
+                height: 30px;
+                top: 0;
+            }
+        }
+
+        &__list {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        &__item {
+            align-items: center;
+        }
+    }
+}
+
+.faq {
+    margin-bottom: rem(100);
+
+    &__inner {
+        @include inner();
+    }
+
+    &__title {
+        @include main-title("../images/deco_faq.webp");
+        margin-bottom: rem(30);
+        text-align: center;
+
+        &::before {
+            width: 33px;
+            height: 51px;
+        }
+    }
+
+    &__list {
+        display: grid;
+        row-gap: rem(15);
+    }
+
+    @include mq() {
+        margin-bottom: rem(200);
+
+        &__title {
+            margin-bottom: rem(80);
+
+            &::before {
+                width: 55px;
+                height: 77px;
+            }
+        }
+
+        &__list {
+            margin: 0 auto;
+        }
+    }
+}
+
+.question {
+    display: flex;
+    padding: rem(20) rem(15);
+    background-color: $color-bg;
+
+    align-items: center;
+    column-gap: rem(25);
+    justify-content: space-between;
+
+    i {
+        transition: transform 0.3s ease;
+    }
+}
+
+.answer {
+    border: 3px solid $color-bg;
+
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.7s ease;
+
+    &__inner {
+        padding: rem(20) rem(15);
+    }
+}
+
+.toggle {
+    display: none;
+}
+
+.toggle:checked+.question+.answer {
+    max-height: 500px;
+}
+
+.toggle:checked+.question i {
+    transform: rotate(180deg);
+}
+
+.access {
+    margin-bottom: rem(100);
+
+    &__inner {
+        @include inner();
+    }
+
+    &__title {
+        @include main-title("../images/deco_access.webp");
+        margin-bottom: rem(30);
+        text-align: center;
+
+        &::before {
+            width: 70px;
+            height: 30px;
+            top: 0;
+        }
+    }
+
+    &__info {
+        display: grid;
+        row-gap: rem(30);
+    }
+
+    &__text {
+        display: grid;
+        row-gap: rem(15);
+    }
+
+    &__pic {
+        position: relative;
+    }
+
+    &__name {
+        @include sub-title();
+        margin-bottom: rem(15);
+    }
+
+    @include mq(tablet) {
+        margin-bottom: rem(200);
+
+        &__title {
+            margin-bottom: rem(80);
+
+            &::before {
+                width: 100px;
+                height: 30px;
+            }
+        }
+
+        &__info {
+            grid-template-columns: auto auto;
+            column-gap: rem(80);
+            justify-content: center;
+        }
+
+        &__text {
+            row-gap: rem(30);
+        }
+
+        &__name {
+            margin-bottom: 0;
+        }
+    }
+
+    &--menu {
+        .access__title {
+            @include main-title();
+        }
+    }
+}
+
+.more {
+    z-index: 1;
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+    justify-content: space-between;
+
+    height: fit-content;
+    position: absolute;
+    color: $color-base;
+    bottom: rem(15);
+    right: rem(15);
+
+    &__text {
+        padding-right: rem(10);
+    }
+
+    &__arrow {
+        color: $color-text;
+        padding: rem(15) rem(30);
+        background-color: $color-base;
+        border-radius: rem(50);
+    }
+}
+
+.message {
+    margin-bottom: rem(100);
+
+    &__inner {
+        @include inner();
+    }
+
+    &__pic {
+        position: relative;
+    }
+
+    &__name {
+        position: absolute;
+        display: inline-block;
+        padding: rem(20) rem(12);
+        font-size: rem(20);
+        font-weight: bold;
+        line-height: math.div(25, 20);
+        letter-spacing: ls(30);
+        writing-mode: vertical-rl;
+        background-color: $color-base;
+        border: 3px solid $color-bg;
+
+        right: rem(-10);
+        top: rem(-12);
+
+        box-shadow: 4px 4px 0 #f5f3ef;
+    }
+
+    &__title {
+        @include main-title("../images/deco_message.webp");
+        text-align: center;
+        margin-bottom: rem(30);
+
+        &::before {
+            width: 85px;
+            height: 39px;
+            top: rem(0);
+        }
+    }
+
+    &__info {
+        display: grid;
+        row-gap: rem(30);
+    }
+
+    &__subtitle {
+        @include sub-title();
+        margin-bottom: rem(30);
+        font-weight: normal;
+    }
+
+    &__text {
+        display: grid;
+        row-gap: rem(15);
+    }
+
+    @include mq(tablet) {
+        margin-bottom: rem(200);
+
+        &__title {
+            margin-bottom: rem(80);
+
+            &::before {
+                width: 135px;
+                height: 77px;
+            }
+        }
+
+        &__info {
+            grid-template-columns: auto auto;
+            column-gap: rem(80);
+            justify-content: center;
+        }
+
+        &__pic {
+            order: 1;
+        }
+    }
+}

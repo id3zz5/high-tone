@@ -1,0 +1,40 @@
+// =================================================================
+//  Variables
+// =================================================================
+
+// --- Spacing ---
+$space-xs: 0.25rem; // 4px
+$space-s: 0.5rem; // 8px
+$space-m: 1rem; // 16px
+$space-l: 1.5rem; // 24px
+$space-xl: 2rem; // 32px
+$space-xxl: 2.5rem; // 40px
+$space-xxxl: 3rem; // 48px
+
+$space-section-sm: 100rem;
+$space-section-dt: 200rem;
+
+// --- Colors ---
+$color-text: #2B2B2B;
+$color-base: #FFFFFF;
+$color-main: #FAE69D;
+$color-accent: #000;
+$color-bg: #F4F2EB;
+
+// --- font size ---
+$sm-main-title: 24;
+$sm-sub-title: 20;
+$dt-main-title: 45;
+$dt-sub-title: 24;
+
+
+// --- Typography ---
+$font-size-base: 16;
+$font-family-gothic: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic", Meiryo, sans-serif;
+$font-family-mincho: "Times New Roman", Times, "Hiragino Mincho ProN", "Yu Mincho", "MS PMincho", serif;
+
+// --- Breakpoints ---
+$breakpoints: (
+    "tablet": 768px,
+    "desktop": 1024px
+);

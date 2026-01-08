@@ -233,23 +233,33 @@ getMicroCMSData('menucategory')
                 menuList.sort((a, b) => a.order - b.order);
                 const menu = menuList[0];
 
-                const link = document.createElement('a');
-                link.className = 'menu__link';
-                link.href = `./menu.html#menu-${category.id}`;
+                const link = document.createElement('div');
+                link.className = 'menu__block';
+                // link.href = `./menu.html#menu-${category.id}`;
 
-                if (menu.image?.url) {
-                    link.style.backgroundImage =
-                        `url(${menu.image.url}?w=800&h=600&fit=crop)`;
+                if (category.image?.url) {
+                    link.style.setProperty(
+                        '--menu-bg',
+                        `url(${category.image.url}?w=800&h=600&fit=crop)`
+                    );
                 }
 
                 link.innerHTML = `
+    <a class="menu__link" href="./menu.html#menu-${category.id}">
       <dl class="menu__item">
         <dt class="menu__subtitle">${category.subtitle}</dt>
         <dd class="menu__price">
           <span class="menu__price-name">${menu.name}</span>
           <span class="menu__price-cost">${menu.price}</span>
         </dd>
+        <dd class="menu__more">
+            <div class="more">
+                <p class="more__text">詳細を見る</p>
+                <i class="fa-solid fa-chevron-right more__arrow"></i>
+            </div>
+        </dd>
       </dl>
+        </a>
     `;
 
                 list.appendChild(link);
