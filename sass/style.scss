@@ -102,16 +102,17 @@ img {
 }
 
 .btn {
-    width: rem(300);
+    height: 60;
     display: grid;
-    padding: rem(15) rem(30);
+    padding: rem(14) rem(30);
+    width: rem(300);
     background-color: $color-base;
     font-weight: bold;
     grid-auto-flow: column;
     align-items: center;
     justify-content: space-between;
-
     position: relative;
+
 
     &::before {
         position: absolute;
@@ -152,9 +153,7 @@ img {
         margin: 0 auto;
     }
 
-    @mixin mq() {
-        padding: rem(5) rem(30);
-    }
+
 }
 
 @mixin main-title($img: null) {
@@ -196,6 +195,8 @@ img {
 }
 
 
+
+
 // =================================================================
 // common
 // =================================================================
@@ -221,6 +222,10 @@ html {
             transition-delay: 0.3s * ($i - 1);
         }
     }
+}
+
+::selection {
+    background-color: $color-main;
 }
 
 // header--------------------------------------------------
@@ -254,7 +259,7 @@ html {
 
 .gnav {
     &-footer {
-        margin-bottom: rem(50);
+        margin-bottom: rem(30);
 
         &__list {
             text-align: center;
@@ -264,6 +269,7 @@ html {
         &__item {
             margin: 0 rem(15);
             display: inline-block;
+            padding-bottom: rem(20);
 
             a {
                 position: relative;
@@ -299,6 +305,7 @@ html {
 
             &__item {
                 margin: 0;
+                padding-bottom: 0;
             }
         }
     }
@@ -1238,7 +1245,6 @@ html {
         }
     }
 
-
     &__subtitle {
         @include sub-title();
     }
@@ -1246,6 +1252,14 @@ html {
     &__list {
         display: grid;
         row-gap: rem(15);
+    }
+
+    &__price-name {
+        white-space: pre-wrap;
+    }
+
+    &__price-cost {
+        display: block;
     }
 
     &__link {
@@ -1612,6 +1626,7 @@ html {
 
     &__name {
         order: 0;
+        white-space: pre-wrap;
     }
 
     &__cost {
@@ -1776,8 +1791,11 @@ html {
 .gallery {
     margin-bottom: rem(100);
 
+
+
     &__inner {
         @include inner();
+        margin: 0 auto;
     }
 
     &__title {
@@ -1861,4 +1879,12 @@ html {
 
 .slick-track {
     margin: 0;
+}
+
+.snapwidget-widget {
+    margin-bottom: rem(40);
+
+    @mixin mq() {
+        margin-bottom: rem(100);
+    }
 }

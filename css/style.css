@@ -21,9 +21,10 @@ img {
 }
 
 .btn {
-  width: 18.75rem;
+  height: 60;
   display: grid;
-  padding: 0.9375rem 1.875rem;
+  padding: 0.875rem 1.875rem;
+  width: 18.75rem;
   background-color: #FFFFFF;
   font-weight: bold;
   grid-auto-flow: column;
@@ -138,6 +139,14 @@ html {
   transition-delay: 5.7s;
 }
 
+::-moz-selection {
+  background-color: #FAE69D;
+}
+
+::selection {
+  background-color: #FAE69D;
+}
+
 .header {
   position: fixed;
   width: 100%;
@@ -164,7 +173,7 @@ html {
 }
 
 .gnav-footer {
-  margin-bottom: 3.125rem;
+  margin-bottom: 1.875rem;
 }
 .gnav-footer__list {
   text-align: center;
@@ -173,6 +182,7 @@ html {
 .gnav-footer__item {
   margin: 0 0.9375rem;
   display: inline-block;
+  padding-bottom: 1.25rem;
 }
 .gnav-footer__item a {
   position: relative;
@@ -203,6 +213,7 @@ html {
   }
   .gnav-footer__item {
     margin: 0;
+    padding-bottom: 0;
   }
 }
 .gnav-header {
@@ -1290,6 +1301,13 @@ html {
   display: grid;
   row-gap: 0.9375rem;
 }
+.menu__price-name {
+  display: block;
+  white-space: pre-wrap;
+}
+.menu__price-cost {
+  display: block;
+}
 .menu__link {
   display: flex;
   height: 100%;
@@ -1723,6 +1741,7 @@ html {
 }
 .container__name {
   order: 0;
+  white-space: pre-wrap;
 }
 .container__cost {
   order: 2;
@@ -1927,6 +1946,7 @@ html {
   width: 90%;
   margin-left: auto;
   margin-right: auto;
+  margin: 0 auto;
 }
 .gallery__title {
   font-size: 1.5rem;
@@ -2050,5 +2070,9 @@ html {
 
 .slick-track {
   margin: 0;
+}
+
+.snapwidget-widget {
+  margin-bottom: 2.5rem;
 }
 /*# sourceMappingURL=style.css.map */

@@ -223,36 +223,37 @@ getMicroCMSData('menucategory')
         if (!list) return;
         list.innerHTML = '';
 
-        Object.keys(grouped).forEach(categoryId => {
+        categories
+            .sort((a, b) => a.order - b.order)
+            .forEach(category => {
 
-            const menuList = grouped[categoryId];
-            menuList.sort((a, b) => a.order - b.order);
-            const menu = menuList[0];
+                const menuList = grouped[category.id];
+                if (!menuList) return;
 
-            const category = categoryMap[categoryId];
-            if (!category) return;
+                menuList.sort((a, b) => a.order - b.order);
+                const menu = menuList[0];
 
-            const link = document.createElement('a');
-            link.className = 'menu__link';
-            link.href = './menu.html';
+                const link = document.createElement('a');
+                link.className = 'menu__link';
+                link.href = `./menu.html#menu-${category.id}`;
 
-            if (menu.image?.url) {
-                link.style.backgroundImage =
-                    `url(${menu.image.url}?w=800&h=600&fit=crop)`;
-            }
+                if (menu.image?.url) {
+                    link.style.backgroundImage =
+                        `url(${menu.image.url}?w=800&h=600&fit=crop)`;
+                }
 
-            link.innerHTML = `
-        <dl class="menu__item">
-          <dt class="menu__subtitle">${category.subtitle}</dt>
-          <dd class="menu__price">
-            <span class="menu__price-name">${menu.name}</span>
-            <span class="menu__price-cost">${menu.price}</span>
-          </dd>
-        </dl>
-      `;
+                link.innerHTML = `
+      <dl class="menu__item">
+        <dt class="menu__subtitle">${category.subtitle}</dt>
+        <dd class="menu__price">
+          <span class="menu__price-name">${menu.name}</span>
+          <span class="menu__price-cost">${menu.price}</span>
+        </dd>
+      </dl>
+    `;
 
-            list.appendChild(link);
-        });
+                list.appendChild(link);
+            });
     });
 
 //menu.html
@@ -276,6 +277,7 @@ getMicroCMSData('menucategory')
 
             const article = document.createElement('article');
             article.className = 'single-menu__item container';
+            article.id = `menu-${category.id}`;
 
             const pic = document.createElement('div');
             pic.className = 'container__pic';
@@ -307,6 +309,13 @@ getMicroCMSData('menucategory')
             article.appendChild(text);
             list.appendChild(article);
         });
+        const hash = location.hash;
+        if (hash) {
+            const target = document.querySelector(hash);
+            if (target) {
+                target.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
     });
 
 //headerの文字の色を変える
