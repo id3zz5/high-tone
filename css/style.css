@@ -488,6 +488,51 @@ html {
   font-weight: bold;
 }
 
+.btn {
+  height: 60;
+  display: grid;
+  padding: 0.875rem 1.875rem;
+  width: 18.75rem;
+  background-color: #FFFFFF;
+  font-weight: bold;
+  grid-auto-flow: column;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+.btn::before {
+  position: absolute;
+  content: " ";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: url(../images/btn-left-top.webp) left top/7px 7px no-repeat, url(../images/btn-right-top.webp) right top/7px 7px no-repeat, url(../images/btn-left-bottom.webp) left bottom/7px 7px no-repeat, url(../images/btn-right-bottom.webp) right bottom/7px 7px no-repeat;
+  z-index: 2;
+}
+.btn:hover::after {
+  transform: scaleY(1);
+}
+.btn::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: #FAE69D;
+  transform: scaleX(0);
+  transition: all 0.5s ease;
+  transition-property: transform;
+}
+.btn p,
+.btn i {
+  z-index: 2;
+}
+.btn--center {
+  margin: 0 auto;
+}
+
 .card__name {
   font-size: 1.25rem;
   line-height: 1.7;
@@ -1286,8 +1331,8 @@ html {
 }
 .menu__item .menu__more {
   position: absolute;
-  bottom: 1.875rem;
-  right: 1.875rem;
+  right: 11.25rem;
+  top: 8.4375rem;
 }
 .menu__item::after {
   content: "";
@@ -1332,6 +1377,7 @@ html {
   color: #FFFFFF;
 }
 .more__text {
+  width: 6.25rem;
   padding-right: 0.625rem;
 }
 .more__arrow {

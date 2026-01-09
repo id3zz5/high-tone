@@ -420,8 +420,9 @@
 
         .menu__more {
             position: absolute;
-            // bottom: rem(15);
-            // right: rem(15);
+            // bottom: rem(55);
+            right: rem(180);
+            top: rem(135);
         }
 
         &::after {
@@ -469,8 +470,8 @@
     height: fit-content;
     position: absolute;
     color: $color-base;
-    bottom: rem(-15);
-    right: rem(-20);
+    // bottom: rem(-150);
+    // right: rem(-200);
 
     &__text {
         width: rem(100);
