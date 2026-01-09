@@ -2,6 +2,10 @@
 //  index.html
 // =================================================================
 
+@use "variables" as *;
+@use "functions" as *;
+@use "sass:math";
+
 .mainvisual {
     color: $color-base;
     background: url(../images/pic_main.webp) no-repeat center center / cover;
@@ -368,6 +372,7 @@
 
     &__subtitle {
         @include sub-title();
+
     }
 
     &__list {
@@ -387,6 +392,7 @@
         position: relative;
         overflow: hidden;
 
+
         .menu__item::after {
             background: var(--menu-bg) no-repeat center / cover;
             transition: transform .3s;
@@ -399,7 +405,7 @@
 
     &__link {
         display: block;
-        aspect-ratio: 9/16;
+        aspect-ratio: 4/3;
     }
 
     &__item {
@@ -409,11 +415,13 @@
         flex-direction: column;
         justify-content: center;
         position: relative;
+        color: $color-base;
+        text-align: center;
 
         .menu__more {
             position: absolute;
-            bottom: 0;
-            right: 0;
+            // bottom: rem(15);
+            // right: rem(15);
         }
 
         &::after {
@@ -448,6 +456,32 @@
         &__item {
             align-items: center;
         }
+    }
+}
+
+.more {
+    z-index: 1;
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+    justify-content: space-between;
+
+    height: fit-content;
+    position: absolute;
+    color: $color-base;
+    bottom: rem(-15);
+    right: rem(-20);
+
+    &__text {
+        width: rem(100);
+        padding-right: rem(10);
+    }
+
+    &__arrow {
+        color: $color-text;
+        padding: rem(15) rem(30);
+        background-color: $color-base;
+        border-radius: rem(50);
     }
 }
 
@@ -602,30 +636,7 @@
     }
 }
 
-.more {
-    z-index: 1;
-    display: grid;
-    grid-auto-flow: column;
-    align-items: center;
-    justify-content: space-between;
 
-    height: fit-content;
-    position: absolute;
-    color: $color-base;
-    bottom: rem(15);
-    right: rem(15);
-
-    &__text {
-        padding-right: rem(10);
-    }
-
-    &__arrow {
-        color: $color-text;
-        padding: rem(15) rem(30);
-        background-color: $color-base;
-        border-radius: rem(50);
-    }
-}
 
 .message {
     margin-bottom: rem(100);

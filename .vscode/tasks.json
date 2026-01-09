@@ -1,0 +1,47 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Dart Sass: Compile SCSS",
+            "type": "shell",
+            "command": "sass",
+            "args": [
+                "sass/style.scss:css/style.css"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always"
+            }
+        },
+        {
+            "label": "Dart Sass: Watch SCSS",
+            "type": "shell",
+            "command": "sass",
+            "args": [
+                "--watch",
+                "sass:css"
+            ],
+            "isBackground": true,
+            "problemMatcher": {
+                "pattern": {
+                    "regexp": "^.*$",
+                    "file": 1,
+                    "location": 2,
+                    "message": 3
+                },
+                "background": {
+                    "activeOnStart": true,
+                    "beginsPattern": "^Compiling.*",
+                    "endsPattern": "^Compiled.*"
+                }
+            },
+            "presentation": {
+                "reveal": "always"
+            }
+        }
+    ]
+}

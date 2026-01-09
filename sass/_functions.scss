@@ -2,6 +2,9 @@
 //  Functions
 // =================================================================
 
+@use "variables" as *;
+@use "sass:math";
+
 // pxをremに変換する
 // @param {number} $px-value - px値
 // @return {string} - rem値

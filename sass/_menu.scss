@@ -2,6 +2,9 @@
 // menu.html
 // =================================================================
 
+@use "variables" as *;
+@use "functions" as *;
+
 .container {
     &__subtitle {
         @include sub-title();

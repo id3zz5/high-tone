@@ -20,51 +20,6 @@ img {
   vertical-align: middle;
 }
 
-.btn {
-  height: 60;
-  display: grid;
-  padding: 0.875rem 1.875rem;
-  width: 18.75rem;
-  background-color: #FFFFFF;
-  font-weight: bold;
-  grid-auto-flow: column;
-  align-items: center;
-  justify-content: space-between;
-  position: relative;
-}
-.btn::before {
-  position: absolute;
-  content: " ";
-  display: block;
-  width: 100%;
-  height: 100%;
-  background: url(../images/btn-left-top.webp) left top/7px 7px no-repeat, url(../images/btn-right-top.webp) right top/7px 7px no-repeat, url(../images/btn-left-bottom.webp) left bottom/7px 7px no-repeat, url(../images/btn-right-bottom.webp) right bottom/7px 7px no-repeat;
-  z-index: 2;
-}
-.btn:hover::after {
-  transform: scaleY(1);
-}
-.btn::after {
-  position: absolute;
-  top: 0;
-  left: 0;
-  content: "";
-  display: block;
-  width: 100%;
-  height: 100%;
-  background: #FAE69D;
-  transform: scaleX(0);
-  transition: all 0.5s ease;
-  transition-property: transform;
-}
-.btn p,
-.btn i {
-  z-index: 2;
-}
-.btn--center {
-  margin: 0 auto;
-}
-
 html {
   scroll-behavior: smooth;
 }
@@ -1139,8 +1094,6 @@ html {
 @media (width >= 1024px) {
   .voice {
     padding: 6.25rem 0;
-    /* 左2行目 */
-    /* 左3行目 */
   }
   .voice__inner {
     max-width: 100%;
@@ -1157,7 +1110,6 @@ html {
     margin-left: auto;
     display: grid;
     grid-template-columns: 30% 70%;
-    /* 左1：右2の比率 */
     grid-template-rows: repeat(3, 150px);
     grid-column: 2/3;
     grid-row: 1/5;
@@ -1320,7 +1272,7 @@ html {
 }
 .menu__link {
   display: block;
-  aspect-ratio: 9/16;
+  aspect-ratio: 4/3;
 }
 .menu__item {
   align-items: center;
@@ -1329,11 +1281,13 @@ html {
   flex-direction: column;
   justify-content: center;
   position: relative;
+  color: #FFFFFF;
+  text-align: center;
 }
 .menu__item .menu__more {
   position: absolute;
-  bottom: 0;
-  right: 0;
+  bottom: 1.875rem;
+  right: 1.875rem;
 }
 .menu__item::after {
   content: "";
@@ -1363,6 +1317,28 @@ html {
   .menu__item {
     align-items: center;
   }
+}
+
+.more {
+  z-index: 1;
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+  justify-content: space-between;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  position: absolute;
+  color: #FFFFFF;
+}
+.more__text {
+  padding-right: 0.625rem;
+}
+.more__arrow {
+  color: #2B2B2B;
+  padding: 0.9375rem 1.875rem;
+  background-color: #FFFFFF;
+  border-radius: 3.125rem;
 }
 
 .faq {
@@ -1581,29 +1557,6 @@ html {
     font-size: 2.8125rem;
     line-height: 2;
   }
-}
-
-.more {
-  z-index: 1;
-  display: grid;
-  grid-auto-flow: column;
-  align-items: center;
-  justify-content: space-between;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  color: #FFFFFF;
-  bottom: 0.9375rem;
-  right: 0.9375rem;
-}
-.more__text {
-  padding-right: 0.625rem;
-}
-.more__arrow {
-  color: #2B2B2B;
-  padding: 0.9375rem 1.875rem;
-  background-color: #FFFFFF;
-  border-radius: 3.125rem;
 }
 
 .message {
@@ -1836,7 +1789,6 @@ html {
     grid-template-columns: 1fr 1fr;
     align-items: end;
     position: relative;
-    /* 偶数番目だけレイアウト反転 */
   }
   .single-menu__item:nth-of-type(even) .container__text {
     grid-column: 1;
@@ -2089,5 +2041,10 @@ html {
 
 .snapwidget-widget {
   margin-bottom: 2.5rem;
+}
+@media (width >= 1024px) {
+  .snapwidget-widget {
+    margin-bottom: 6.25rem;
+  }
 }
 /*# sourceMappingURL=style.css.map */
