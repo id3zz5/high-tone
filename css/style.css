@@ -1315,6 +1315,13 @@ html {
 .menu__block:hover .menu__item::after {
   transform: scale(1.1);
 }
+.menu__block::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 0;
+}
 .menu__link {
   display: block;
   aspect-ratio: 4/3;
@@ -1328,11 +1335,6 @@ html {
   position: relative;
   color: #FFFFFF;
   text-align: center;
-}
-.menu__item .menu__more {
-  position: absolute;
-  right: 11.25rem;
-  top: 8.4375rem;
 }
 .menu__item::after {
   content: "";
@@ -1366,8 +1368,7 @@ html {
 
 .more {
   z-index: 1;
-  display: grid;
-  grid-auto-flow: column;
+  display: flex;
   align-items: center;
   justify-content: space-between;
   height: -webkit-fit-content;
@@ -1375,6 +1376,8 @@ html {
   height: fit-content;
   position: absolute;
   color: #FFFFFF;
+  bottom: 0.625rem;
+  right: 0.625rem;
 }
 .more__text {
   width: 6.25rem;

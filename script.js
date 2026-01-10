@@ -236,13 +236,11 @@ function initIndexMicroCMS() {
                                     <span class="menu__price-name">${menu.name}</span>
                                     <span class="menu__price-cost">${menu.price}</span>
                                 </dd>
-                                <dd class="menu__more">
-                                    <div class="more">
+                            </dl>
+                             <div class="more">
                                         <p class="more__text">詳細を見る</p>
                                         <i class="fa-solid fa-chevron-right more__arrow"></i>
-                                    </div>
-                                </dd>
-                            </dl>
+                             </div>
                         </a>
                     `;
                     list.appendChild(link);
