@@ -406,7 +406,7 @@
             content: "";
             position: absolute;
             inset: 0;
-            background: rgba(0, 0, 0, 0.3); // ←ここで暗さ調整
+            background: rgba(0, 0, 0, 0.3);
             z-index: 0;
         }
     }
@@ -474,13 +474,13 @@
     right: rem(10);
 
     &__text {
-        width: rem(100);
-        padding-right: rem(10);
+        width: rem(90);
+        padding-right: rem(5);
     }
 
     &__arrow {
         color: $color-text;
-        padding: rem(15) rem(30);
+        padding: rem(10) rem(20);
         background-color: $color-base;
         border-radius: rem(50);
     }

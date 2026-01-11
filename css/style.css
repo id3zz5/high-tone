@@ -1380,12 +1380,12 @@ html {
   right: 0.625rem;
 }
 .more__text {
-  width: 6.25rem;
-  padding-right: 0.625rem;
+  width: 5.625rem;
+  padding-right: 0.3125rem;
 }
 .more__arrow {
   color: #2B2B2B;
-  padding: 0.9375rem 1.875rem;
+  padding: 0.625rem 1.25rem;
   background-color: #FFFFFF;
   border-radius: 3.125rem;
 }
