@@ -188,10 +188,46 @@
     }
 
     &__item {
+        position: relative;
         padding: rem(300) rem(40) rem(20);
-        background-color: $color-bg;
-        border-radius: rem(50);
+
+        &:nth-of-type(1)::before {
+            background: url("../images/pic_feature01.webp") center center/cover no-repeat;
+            border-radius: rem(50);
+        }
+
+        &:nth-of-type(2)::before {
+            background: url("../images/pic_feature02.webp") center center/cover no-repeat;
+            border-radius: rem(50);
+        }
+
+        &:nth-of-type(3)::before {
+            background: url("../images/pic_feature03.webp") center center/cover no-repeat;
+            border-radius: rem(50);
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+
+            /* 画像だけを下に行くほど透明に */
+            -webkit-mask-image: linear-gradient(to bottom,
+                    rgba(0, 0, 0, 1) 0%,
+                    rgba(0, 0, 0, 0.5) 50%,
+                    rgba(0, 0, 0, 0) 100%);
+            mask-image: linear-gradient(to bottom,
+                    rgba(0, 0, 0, 1) 0%,
+                    rgba(0, 0, 0, 0.5) 50%,
+                    rgba(0, 0, 0, 0) 100%);
+        }
+
+        &>* {
+            position: relative;
+            z-index: 1;
+        }
     }
+
 
     &__catch {
         @include main-title();
@@ -524,6 +560,25 @@
         &__list {
             margin: 0 auto;
         }
+    }
+}
+
+
+.banner {
+    margin-bottom: rem(100);
+
+    &__inner {
+        @include inner();
+    }
+
+    &__pic {
+        margin: 0 auto;
+        display: block;
+        width: 80%;
+    }
+
+    @include mq(tablet) {
+        margin-bottom: rem(200);
     }
 }
 

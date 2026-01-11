@@ -1021,9 +1021,32 @@ html {
   row-gap: 0.9375rem;
 }
 .feature__item {
+  position: relative;
   padding: 18.75rem 2.5rem 1.25rem;
-  background-color: #F4F2EB;
+}
+.feature__item:nth-of-type(1)::before {
+  background: url("../images/pic_feature01.webp") center center/cover no-repeat;
   border-radius: 3.125rem;
+}
+.feature__item:nth-of-type(2)::before {
+  background: url("../images/pic_feature02.webp") center center/cover no-repeat;
+  border-radius: 3.125rem;
+}
+.feature__item:nth-of-type(3)::before {
+  background: url("../images/pic_feature03.webp") center center/cover no-repeat;
+  border-radius: 3.125rem;
+}
+.feature__item::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  /* 画像だけを下に行くほど透明に */
+  -webkit-mask-image: linear-gradient(to bottom, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0) 100%);
+  mask-image: linear-gradient(to bottom, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0) 100%);
+}
+.feature__item > * {
+  position: relative;
+  z-index: 1;
 }
 .feature__catch {
   font-size: 1.5rem;
@@ -1450,6 +1473,26 @@ html {
   }
   .faq__list {
     margin: 0 auto;
+  }
+}
+
+.banner {
+  margin-bottom: 6.25rem;
+}
+.banner__inner {
+  max-width: 1060px;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.banner__pic {
+  margin: 0 auto;
+  display: block;
+  width: 80%;
+}
+@media (width >= 768px) {
+  .banner {
+    margin-bottom: 12.5rem;
   }
 }
 

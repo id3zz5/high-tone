@@ -176,6 +176,22 @@ async function getMicroCMSData(endpoint, options = {}) {
 }
 
 function initIndexMicroCMS() {
+
+
+    // ===== バナー表示 =====
+    getMicroCMSData('banner')
+        .then(res => {
+            const inner = document.querySelector('.banner__inner');
+            if (!inner || !res.banner?.url) return;
+
+            const img = document.createElement('img');
+            img.src = res.banner.url;
+            img.alt = 'バナー画像';
+            img.className = 'banner__pic';
+
+            inner.appendChild(img);
+        });
+
     // index.html の情報表示
     getMicroCMSData('info')
         .then(res => {
