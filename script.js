@@ -39,8 +39,8 @@ function initCaseSlider() {
                     centerPadding: '60px',
                     slidesToShow: 3,
                     arrows: true,
-                    prevArrow: '<button class="slick-prev"><i class="fa-solid fa-angle-left"></i></button>',
-                    nextArrow: '<button class="slick-next"><i class="fa-solid fa-angle-right"></i></button>',
+                    prevArrow: '<button class="slick-prev" aria-label="前のスライド"><i class="fa-solid fa-angle-left"></i></button>',
+                    nextArrow: '<button class="slick-next" aria-label="次のスライド"><i class="fa-solid fa-angle-right"></i></button>',
                     appendArrows: $('.case__arrow-area'),
                     responsive: [
                         {
@@ -82,8 +82,8 @@ function initVoiceSlider() {
         slidesToShow: 3,
         variableWidth: true,
         arrows: true,
-        prevArrow: '<button class="slick-prev"><i class="fa-solid fa-angle-left"></i></button>',
-        nextArrow: '<button class="slick-next"><i class="fa-solid fa-angle-right"></i></button>',
+        prevArrow: '<button class="slick-prev" aria-label="前のスライド"><i class="fa-solid fa-angle-left"></i></button>',
+        nextArrow: '<button class="slick-next" aria-label="次のスライド"><i class="fa-solid fa-angle-right"></i></button>',
         appendArrows: $('.voice__arrow-area'),
         responsive: [
             {
@@ -118,8 +118,8 @@ function initGoodsSlider() {
                     centerPadding: '60px',
                     slidesToShow: 3,
                     arrows: true,
-                    prevArrow: '<button class="slick-prev"><i class="fa-solid fa-angle-left"></i></button>',
-                    nextArrow: '<button class="slick-next"><i class="fa-solid fa-angle-right"></i></button>',
+                    prevArrow: '<button class="slick-prev" aria-label="前のスライド"><i class="fa-solid fa-angle-left"></i></button>',
+                    nextArrow: '<button class="slick-next" aria-label="次のスライド"><i class="fa-solid fa-angle-right"></i></button>',
                     appendArrows: $('.goods__arrow-area'),
                     responsive: [
                         {

@@ -16,7 +16,8 @@
         width: 60px;
         height: 60px;
         border-radius: 50%;
-        background: $color-main;
+        border: 1px solid $color-text;
+        background: $color-base;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -24,12 +25,20 @@
         /* 文字を消す */
         font-size: 0;
 
+        transition:
+            background-color 0.4s ease,
+            transform 0.3s ease;
+
+        &:hover {
+            background-color: $color-main;
+        }
+
     }
 
     &-prev i,
     &-next i {
         font-size: 24px;
-        color: $color-base;
+        color: $color-text;
     }
 
     &-current {

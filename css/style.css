@@ -95,11 +95,11 @@ html {
 }
 
 ::-moz-selection {
-  background-color: #FAE69D;
+  background-color: #FBE79E;
 }
 
 ::selection {
-  background-color: #FAE69D;
+  background-color: #FBE79E;
 }
 
 .header {
@@ -250,7 +250,7 @@ html {
   padding: 0.4375rem 1.25rem;
 }
 .sns__item:hover {
-  background-color: #FAE69D;
+  background-color: #FBE79E;
 }
 
 .dt-menu {
@@ -471,7 +471,7 @@ html {
   }
 }
 .dots {
-  background-image: radial-gradient(circle at center, #FAE69D 20%, transparent 20%);
+  background-image: radial-gradient(circle at center, #FBE79E 20%, transparent 20%);
   background-position: top right;
   background-repeat: repeat-x;
   background-size: 1em 0.3em;
@@ -520,7 +520,7 @@ html {
   display: block;
   width: 100%;
   height: 100%;
-  background: #FAE69D;
+  background: #FBE79E;
   transform: scaleX(0);
   transition: all 0.5s ease;
   transition-property: transform;
@@ -659,7 +659,7 @@ html {
   height: 70px;
   padding: 0.9375rem;
   color: #FFFFFF;
-  background-color: #FAE69D;
+  background-color: #FBE79E;
   font-size: 2rem;
   line-height: 1.3;
   text-align: center;
@@ -671,6 +671,9 @@ html {
 }
 .box__arrow-bottom {
   margin: 0 auto;
+}
+.box .img {
+  width: 100%;
 }
 @media (width >= 768px) {
   .box {
@@ -699,17 +702,22 @@ html {
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  background: #FAE69D;
+  border: 1px solid #2B2B2B;
+  background: #FFFFFF;
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 10;
   /* 文字を消す */
   font-size: 0;
+  transition: background-color 0.4s ease, transform 0.3s ease;
+}
+.slick-prev:hover, .slick-next:hover {
+  background-color: #FBE79E;
 }
 .slick-prev i, .slick-next i {
   font-size: 24px;
-  color: #FFFFFF;
+  color: #2B2B2B;
 }
 .slick-current {
   transform: scale(1.08);
@@ -1488,7 +1496,7 @@ html {
 .banner__pic {
   margin: 0 auto;
   display: block;
-  width: 80%;
+  width: 70%;
 }
 @media (width >= 768px) {
   .banner {
@@ -1754,6 +1762,13 @@ html {
   .message__pic {
     order: 1;
   }
+}
+
+.snapwidget-widget {
+  border: none;
+  overflow: hidden;
+  width: 100%;
+  background: transparent;
 }
 
 .container__subtitle {

@@ -5,6 +5,13 @@
 @use "variables" as *;
 @use "functions" as *;
 
+.snapwidget-widget {
+    border: none;
+    overflow: hidden;
+    width: 100%;
+    background: transparent;
+}
+
 .container {
     &__subtitle {
         @include sub-title();
