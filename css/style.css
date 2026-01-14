@@ -256,7 +256,7 @@ html {
 .dt-menu {
   display: none;
 }
-@media (width >= 1024px) {
+@media (width >= 1270px) {
   .dt-menu {
     display: block;
   }
@@ -277,7 +277,7 @@ html {
   right: -49%;
   z-index: 9999;
 }
-@media (width >= 1024px) {
+@media (width >= 1270px) {
   .sp-menu {
     display: none;
   }
@@ -776,7 +776,7 @@ html {
   .mainvisual {
     height: 100vh;
     margin-bottom: 17.5rem;
-    padding: 40.625rem 0 4.375rem 0;
+    padding-top: 80vh;
   }
 }
 

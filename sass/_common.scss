@@ -214,7 +214,7 @@ html {
     // transition: color 0.4s;
     display: none;
 
-    @include mq() {
+    @include mq(header) {
         display: block;
     }
 }
@@ -236,7 +236,7 @@ html {
         z-index: 9999;
     }
 
-    @include mq() {
+    @include mq(header) {
         display: none;
     }
 
