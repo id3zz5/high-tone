@@ -1496,7 +1496,7 @@ html {
 .banner__pic {
   margin: 0 auto;
   display: block;
-  width: 70%;
+  width: 60%;
 }
 @media (width >= 768px) {
   .banner {
