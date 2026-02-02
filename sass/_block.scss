@@ -5,6 +5,8 @@
 @use "variables" as *;
 @use "functions" as *;
 
+
+
 .dots {
     background-image: radial-gradient(circle at center, $color-main 20%, transparent 20%);
     background-position: top right;

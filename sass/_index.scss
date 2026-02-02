@@ -57,7 +57,7 @@
     @include mq() {
         margin-bottom: rem(200);
         padding: rem(50) 0 rem(50) 0;
-        background-color: #fff;
+        background-color: $color-base-bg;
 
         &__inner {
             display: grid;
@@ -306,6 +306,12 @@
             width: 100%;
         }
 
+        &__title {
+            &::before {
+                top: rem(15);
+            }
+        }
+
         &::before {
             content: none;
         }
@@ -442,7 +448,7 @@
             content: "";
             position: absolute;
             inset: 0;
-            background: rgba(0, 0, 0, 0.3);
+            background: rgba(0, 0, 0, 0.2);
             z-index: 0;
         }
     }
@@ -483,7 +489,7 @@
             &::before {
                 width: 86px;
                 height: 30px;
-                top: 0;
+                top: rem(15);
             }
         }
 
@@ -493,6 +499,10 @@
 
         &__item {
             align-items: center;
+
+            &::after {
+                transform: scale(1.1);
+            }
         }
     }
 }
@@ -667,6 +677,7 @@
             &::before {
                 width: 100px;
                 height: 30px;
+                top: rem(15);
             }
         }
 

@@ -48,6 +48,7 @@
 
 body {
     color: $color-text;
+    background-color: $color-base-bg;
     font-size: rem($font-size-base);
     font-family: $font-family-mincho;
     line-height: math.div(32, 16);

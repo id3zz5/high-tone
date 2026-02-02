@@ -102,7 +102,7 @@ html {
             &__list {
                 display: grid;
                 grid-template-columns: 1fr 1fr;
-                gap: rem(15) rem(50);
+                gap: rem(15) rem(45);
                 text-align: left;
                 margin-top: rem(40);
             }
@@ -182,8 +182,7 @@ html {
 
     &__item {
         display: inline;
-        background-color: $color-base;
-        border: $color-text 1px solid;
+        background-color: $color-bg;
         border-radius: rem(25);
         text-align: center;
         justify-content: start;
@@ -203,7 +202,7 @@ html {
         }
 
         &:hover {
-            background-color: $color-main;
+            background-color: $color-base;
         }
     }
 }
@@ -330,7 +329,7 @@ html {
     padding-top: 100px;
     width: 100vw;
     height: 100vh;
-    background-color: $color-bg;
+    background-color: $color-base-bg;
     opacity: 0;
     overflow-y: auto;
     overflow-x: hidden;
@@ -389,6 +388,7 @@ html {
     &__logo {
         display: block;
         margin: 0 auto rem(30) auto;
+        width: 70%;
     }
 
     &__btn {

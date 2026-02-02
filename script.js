@@ -329,20 +329,27 @@ function initMenuMicroCMS() {
 // =============================================
 
 function initScrollEvents() {
-    // headerの文字の色を変える
     const gnavList = document.querySelector('.gnav-header__list');
     const mainvisual = document.querySelector('.mainvisual');
 
-    window.addEventListener('scroll', () => {
-        if (mainvisual) {
-            const mvBottom = mainvisual.offsetTop + mainvisual.offsetHeight;
-            if (window.scrollY < mvBottom) {
-                gnavList.classList.add('is-white');
-            } else {
-                gnavList.classList.remove('is-white');
-            }
+    if (!gnavList || !mainvisual) return;
+
+    // 色を切り替える処理
+    function checkHeaderColor() {
+        const mvBottom = mainvisual.offsetTop + mainvisual.offsetHeight;
+
+        if (window.scrollY < mvBottom) {
+            gnavList.classList.add('is-white');
+        } else {
+            gnavList.classList.remove('is-white');
         }
-    });
+    }
+
+    // スクロールしたとき
+    window.addEventListener('scroll', checkHeaderColor);
+
+    // ページを開いたとき（再読み込み時も含む）
+    checkHeaderColor();
 }
 
 // =============================================
