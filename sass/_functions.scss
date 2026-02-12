@@ -63,7 +63,7 @@ img {
 
 @mixin main-title($img: null) {
     font-size: rem($sm-main-title);
-    line-height: math.div(48, $sm-main-title);
+    line-height: math.div(42, $sm-main-title);
     position: relative;
     width: fit-content;
     margin-left: auto;
@@ -78,13 +78,13 @@ img {
         display: block;
         position: absolute;
         right: rem(-20);
-        top: rem(-10);
+        top: rem(-25);
         z-index: -1;
     }
 
     @include mq() {
         font-size: rem($dt-main-title);
-        line-height: math.div(90, $dt-main-title);
+        line-height: math.div(54, $dt-main-title);
     }
 }
 

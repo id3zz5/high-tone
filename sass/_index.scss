@@ -30,7 +30,7 @@
 
 .concept {
     margin-bottom: rem(100);
-    padding: rem(200) 0 rem(30) 0;
+    padding: rem(180) 0 rem(30) 0;
     background-color: $color-bg;
     position: relative;
 
@@ -47,7 +47,7 @@
 
     &__title {
         @include main-title();
-        margin-bottom: rem(30);
+        margin: 0 auto rem(30) 0;
     }
 
     &__text {
@@ -67,9 +67,10 @@
         }
 
         &__pic {
-            width: 600px;
-            height: 700px;
-            top: rem(-80);
+            width: 500px;
+            height: 600px;
+            top: rem(-150);
+            left: rem(230);
         }
 
         &__title {
@@ -308,7 +309,7 @@
 
         &__title {
             &::before {
-                top: rem(15);
+                top: rem(-10);
             }
         }
 
@@ -489,7 +490,7 @@
             &::before {
                 width: 86px;
                 height: 30px;
-                top: rem(15);
+                top: rem(0);
             }
         }
 
@@ -677,7 +678,6 @@
             &::before {
                 width: 100px;
                 height: 30px;
-                top: rem(15);
             }
         }
 
@@ -771,6 +771,7 @@
             &::before {
                 width: 135px;
                 height: 77px;
+                top: rem(-10);
             }
         }
 

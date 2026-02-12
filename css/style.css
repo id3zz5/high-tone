@@ -746,7 +746,7 @@ html {
 }
 .mainvisual__title {
   font-size: 1.6rem;
-  line-height: 2;
+  line-height: 1.75;
   position: relative;
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -764,13 +764,13 @@ html {
   display: block;
   position: absolute;
   right: -1.3333333333rem;
-  top: -0.6666666667rem;
+  top: -1.6666666667rem;
   z-index: -1;
 }
 @media (width >= 1024px) {
   .mainvisual__title {
     font-size: 2.1333333333rem;
-    line-height: 2.8125;
+    line-height: 1.6875;
   }
 }
 @media (width >= 1024px) {
@@ -783,7 +783,7 @@ html {
 
 .concept {
   margin-bottom: 6.6666666667rem;
-  padding: 13.3333333333rem 0 2rem 0;
+  padding: 12rem 0 2rem 0;
   background-color: #F3EEE1;
   position: relative;
 }
@@ -801,7 +801,7 @@ html {
 }
 .concept__title {
   font-size: 1.6rem;
-  line-height: 2;
+  line-height: 1.75;
   position: relative;
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -809,7 +809,7 @@ html {
   margin-left: auto;
   margin-right: auto;
   z-index: 0;
-  margin-bottom: 2rem;
+  margin: 0 auto 2rem 0;
 }
 .concept__title::before {
   content: "";
@@ -819,13 +819,13 @@ html {
   display: block;
   position: absolute;
   right: -1.3333333333rem;
-  top: -0.6666666667rem;
+  top: -1.6666666667rem;
   z-index: -1;
 }
 @media (width >= 1024px) {
   .concept__title {
     font-size: 2.1333333333rem;
-    line-height: 2.8125;
+    line-height: 1.6875;
   }
 }
 .concept__text {
@@ -844,9 +844,10 @@ html {
     padding: 3.3333333333rem 6.6666666667rem;
   }
   .concept__pic {
-    width: 600px;
-    height: 700px;
-    top: -5.3333333333rem;
+    width: 500px;
+    height: 600px;
+    top: -10rem;
+    left: 15.3333333333rem;
   }
   .concept__title {
     margin-left: auto;
@@ -870,7 +871,7 @@ html {
 }
 .worries__title {
   font-size: 1.6rem;
-  line-height: 2;
+  line-height: 1.75;
   position: relative;
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -889,13 +890,13 @@ html {
   display: block;
   position: absolute;
   right: -1.3333333333rem;
-  top: -0.6666666667rem;
+  top: -1.6666666667rem;
   z-index: -1;
 }
 @media (width >= 1024px) {
   .worries__title {
     font-size: 2.1333333333rem;
-    line-height: 2.8125;
+    line-height: 1.6875;
   }
 }
 .worries__list {
@@ -916,7 +917,7 @@ html {
 }
 .worries__catch {
   font-size: 1.6rem;
-  line-height: 2;
+  line-height: 1.75;
   position: relative;
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -937,13 +938,13 @@ html {
   display: block;
   position: absolute;
   right: -1.3333333333rem;
-  top: -0.6666666667rem;
+  top: -1.6666666667rem;
   z-index: -1;
 }
 @media (width >= 1024px) {
   .worries__catch {
     font-size: 2.1333333333rem;
-    line-height: 2.8125;
+    line-height: 1.6875;
   }
 }
 @media (width >= 768px) {
@@ -993,7 +994,7 @@ html {
 .feature__title {
   margin-bottom: 2rem;
   font-size: 1.6rem;
-  line-height: 2;
+  line-height: 1.75;
   position: relative;
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -1011,13 +1012,13 @@ html {
   display: block;
   position: absolute;
   right: -1.3333333333rem;
-  top: -0.6666666667rem;
+  top: -1.6666666667rem;
   z-index: -1;
 }
 @media (width >= 1024px) {
   .feature__title {
     font-size: 2.1333333333rem;
-    line-height: 2.8125;
+    line-height: 1.6875;
   }
 }
 .feature__title::before {
@@ -1059,7 +1060,7 @@ html {
 }
 .feature__catch {
   font-size: 1.6rem;
-  line-height: 2;
+  line-height: 1.75;
   position: relative;
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -1077,13 +1078,13 @@ html {
   display: block;
   position: absolute;
   right: -1.3333333333rem;
-  top: -0.6666666667rem;
+  top: -1.6666666667rem;
   z-index: -1;
 }
 @media (width >= 1024px) {
   .feature__catch {
     font-size: 2.1333333333rem;
-    line-height: 2.8125;
+    line-height: 1.6875;
   }
 }
 @media (width >= 1024px) {
@@ -1118,7 +1119,7 @@ html {
 }
 .voice__title {
   font-size: 1.6rem;
-  line-height: 2;
+  line-height: 1.75;
   position: relative;
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -1136,13 +1137,13 @@ html {
   display: block;
   position: absolute;
   right: -1.3333333333rem;
-  top: -0.6666666667rem;
+  top: -1.6666666667rem;
   z-index: -1;
 }
 @media (width >= 1024px) {
   .voice__title {
     font-size: 2.1333333333rem;
-    line-height: 2.8125;
+    line-height: 1.6875;
   }
 }
 .voice__title::before {
@@ -1177,7 +1178,7 @@ html {
     width: 100%;
   }
   .voice__title::before {
-    top: 1rem;
+    top: -0.6666666667rem;
   }
   .voice::before {
     content: none;
@@ -1223,7 +1224,7 @@ html {
 }
 .flow__title {
   font-size: 1.6rem;
-  line-height: 2;
+  line-height: 1.75;
   position: relative;
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -1242,13 +1243,13 @@ html {
   display: block;
   position: absolute;
   right: -1.3333333333rem;
-  top: -0.6666666667rem;
+  top: -1.6666666667rem;
   z-index: -1;
 }
 @media (width >= 1024px) {
   .flow__title {
     font-size: 2.1333333333rem;
-    line-height: 2.8125;
+    line-height: 1.6875;
   }
 }
 .flow__title::before {
@@ -1286,7 +1287,7 @@ html {
 }
 .menu__title {
   font-size: 1.6rem;
-  line-height: 2;
+  line-height: 1.75;
   position: relative;
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -1305,13 +1306,13 @@ html {
   display: block;
   position: absolute;
   right: -1.3333333333rem;
-  top: -0.6666666667rem;
+  top: -1.6666666667rem;
   z-index: -1;
 }
 @media (width >= 1024px) {
   .menu__title {
     font-size: 2.1333333333rem;
-    line-height: 2.8125;
+    line-height: 1.6875;
   }
 }
 .menu__title::before {
@@ -1391,7 +1392,7 @@ html {
   .menu__title::before {
     width: 86px;
     height: 30px;
-    top: 1rem;
+    top: 0rem;
   }
   .menu__list {
     grid-template-columns: repeat(3, 1fr);
@@ -1439,7 +1440,7 @@ html {
 }
 .faq__title {
   font-size: 1.6rem;
-  line-height: 2;
+  line-height: 1.75;
   position: relative;
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -1458,13 +1459,13 @@ html {
   display: block;
   position: absolute;
   right: -1.3333333333rem;
-  top: -0.6666666667rem;
+  top: -1.6666666667rem;
   z-index: -1;
 }
 @media (width >= 1024px) {
   .faq__title {
     font-size: 2.1333333333rem;
-    line-height: 2.8125;
+    line-height: 1.6875;
   }
 }
 .faq__title::before {
@@ -1557,7 +1558,7 @@ html {
 }
 .access__title {
   font-size: 1.6rem;
-  line-height: 2;
+  line-height: 1.75;
   position: relative;
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -1576,13 +1577,13 @@ html {
   display: block;
   position: absolute;
   right: -1.3333333333rem;
-  top: -0.6666666667rem;
+  top: -1.6666666667rem;
   z-index: -1;
 }
 @media (width >= 1024px) {
   .access__title {
     font-size: 2.1333333333rem;
-    line-height: 2.8125;
+    line-height: 1.6875;
   }
 }
 .access__title::before {
@@ -1623,7 +1624,6 @@ html {
   .access__title::before {
     width: 100px;
     height: 30px;
-    top: 1rem;
   }
   .access__info {
     grid-template-columns: auto auto;
@@ -1640,7 +1640,7 @@ html {
 }
 .access--menu .access__title {
   font-size: 1.6rem;
-  line-height: 2;
+  line-height: 1.75;
   position: relative;
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -1657,13 +1657,13 @@ html {
   display: block;
   position: absolute;
   right: -1.3333333333rem;
-  top: -0.6666666667rem;
+  top: -1.6666666667rem;
   z-index: -1;
 }
 @media (width >= 1024px) {
   .access--menu .access__title {
     font-size: 2.1333333333rem;
-    line-height: 2.8125;
+    line-height: 1.6875;
   }
 }
 
@@ -1696,7 +1696,7 @@ html {
 }
 .message__title {
   font-size: 1.6rem;
-  line-height: 2;
+  line-height: 1.75;
   position: relative;
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -1715,13 +1715,13 @@ html {
   display: block;
   position: absolute;
   right: -1.3333333333rem;
-  top: -0.6666666667rem;
+  top: -1.6666666667rem;
   z-index: -1;
 }
 @media (width >= 1024px) {
   .message__title {
     font-size: 2.1333333333rem;
-    line-height: 2.8125;
+    line-height: 1.6875;
   }
 }
 .message__title::before {
@@ -1760,6 +1760,7 @@ html {
   .message__title::before {
     width: 135px;
     height: 77px;
+    top: -0.6666666667rem;
   }
   .message__info {
     grid-template-columns: auto auto;
@@ -1856,7 +1857,7 @@ html {
 }
 .single-menu__title {
   font-size: 1.6rem;
-  line-height: 2;
+  line-height: 1.75;
   position: relative;
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -1878,13 +1879,13 @@ html {
   display: block;
   position: absolute;
   right: -1.3333333333rem;
-  top: -0.6666666667rem;
+  top: -1.6666666667rem;
   z-index: -1;
 }
 @media (width >= 1024px) {
   .single-menu__title {
     font-size: 2.1333333333rem;
-    line-height: 2.8125;
+    line-height: 1.6875;
   }
 }
 @media (width >= 1024px) {
@@ -1892,7 +1893,7 @@ html {
     margin-bottom: 13.3333333333rem;
   }
   .single-menu__title {
-    font-size: 4.2666666667rem;
+    font-size: 2.8rem;
     margin-bottom: 13.3333333333rem;
   }
   .single-menu__list {
@@ -1930,7 +1931,7 @@ html {
 }
 .attention__title {
   font-size: 1.6rem;
-  line-height: 2;
+  line-height: 1.75;
   position: relative;
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -1948,13 +1949,13 @@ html {
   display: block;
   position: absolute;
   right: -1.3333333333rem;
-  top: -0.6666666667rem;
+  top: -1.6666666667rem;
   z-index: -1;
 }
 @media (width >= 1024px) {
   .attention__title {
     font-size: 2.1333333333rem;
-    line-height: 2.8125;
+    line-height: 1.6875;
   }
 }
 .attention__text {
@@ -2032,7 +2033,7 @@ html {
 }
 .gallery__title {
   font-size: 1.6rem;
-  line-height: 2;
+  line-height: 1.75;
   position: relative;
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -2053,13 +2054,13 @@ html {
   display: block;
   position: absolute;
   right: -1.3333333333rem;
-  top: -0.6666666667rem;
+  top: -1.6666666667rem;
   z-index: -1;
 }
 @media (width >= 1024px) {
   .gallery__title {
     font-size: 2.1333333333rem;
-    line-height: 2.8125;
+    line-height: 1.6875;
   }
 }
 .gallery__title::before, .gallery__title::after {
@@ -2108,7 +2109,7 @@ html {
 }
 .goods__title {
   font-size: 1.6rem;
-  line-height: 2;
+  line-height: 1.75;
   position: relative;
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -2125,13 +2126,13 @@ html {
   display: block;
   position: absolute;
   right: -1.3333333333rem;
-  top: -0.6666666667rem;
+  top: -1.6666666667rem;
   z-index: -1;
 }
 @media (width >= 1024px) {
   .goods__title {
     font-size: 2.1333333333rem;
-    line-height: 2.8125;
+    line-height: 1.6875;
   }
 }
 @media (width >= 1024px) {
